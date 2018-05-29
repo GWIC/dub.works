@@ -21,7 +21,7 @@ fi
 NODE_INSTALLED=$(dpkg-query -W --showformat='${Status}\n' $NODE | grep "install ok installed")
 echo "Checking for $NODE: $NODE_INSTALLED"
 if [ "" == "$NODE_INSTALLED" ]; then
-    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     apt-get install -y build-essential nodejs
 fi
 
@@ -67,18 +67,9 @@ if [ "" == "$GULP_INSTALLED" ]; then
     npm install -g gulp
 fi
 
-# MEAN.js
-DIRECTORY="./mean"
-if [ -d "$DIRECTORY"]; then
-    echo "Checking for $DIRECTORY: Directory exists. Moving on..."
-else
-    echo "Checking for $DIRECTORY: Directory missing. Cloning now..."
-    git clone https://github.com/linnovate/mean.git
+# MEAN-CLI
+MEAN_INSTALLED=$(npm list --depth 1 --parseable=true --global mean-cli > /dev/null 2>&1)
+echo "Checking for $MEAN: $MEAN_INSTALLED"
+if [ "" == "$MEAN_INSTALLED" ]; then
+    npm install -g mean-cli
 fi
-
-# Installs MEAN.io dependencies
-cd mean
-npm install
-
-# Starts MEAN.io app
-npm start
