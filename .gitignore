@@ -1,0 +1,10 @@
+# ===== Text Editor =====
+*~
+*#
+
+# ===== OS Files =====
+.DS_STORE
+
+# ===== Vagrant =====
+.vagrant
+*.log
