@@ -22,3 +22,8 @@ if [ ! -d ~/.meteor ]; then
 else
     echo "Checking for $METEOR: install ok installed"
 fi
+
+# Directory setup
+mv /vagrant/dub.works ./dub.works
+mount --bind /home/vagrant/dub.works/.meteor/ /vagrant/dub.works/.meteor/
+echo "sudo mount --bind /home/vagrant/dub.works/.meteor/ /vagrant/dub.works/.meteor/" >> ~/.bashrc && source ~/.bashrc
