@@ -1,5 +1,5 @@
 # dub.works
-MEAN stack port of the current dub.works website
+[Meteor](https://www.meteor.com/) port of the current dub.works website
 
 ## Installation
 ### Cloning
