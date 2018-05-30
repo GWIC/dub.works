@@ -1,13 +1,14 @@
 # dub.works
 MEAN stack port of the current dub.works website
 
-## Cloning
+## Installation
+### Cloning
 Run the following command:
 ```bash
 git clone https://github.com/omn0mn0m/dub.works.git
 ```
 
-## Setting Up Vagrant
+### Setting Up Vagrant
 Follow the instructions found [here](https://www.vagrantup.com/intro/getting-started/install.html). This project has been tested with VirtualBox, but should also work with VMware (someone please confirm this).
 
 After installing VM software and Vagrant, run the following command while in the repo:
