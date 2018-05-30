@@ -24,6 +24,6 @@ else
 fi
 
 # Directory setup
-cp -r /vagrant/dub.works ./dub.works
-mount --bind /home/vagrant/dub.works/.meteor/ /vagrant/dub.works/.meteor/
-echo "sudo mount --bind /home/vagrant/dub.works/.meteor/ /vagrant/dub.works/.meteor/" >> ~/.bashrc && source ~/.bashrc
+#cp -r /vagrant/dub.works ./dub.works
+#mount --bind /home/vagrant/dub.works/.meteor/ /vagrant/dub.works/.meteor/
+#echo "sudo mount --bind /home/vagrant/dub.works/.meteor/ /vagrant/dub.works/.meteor/" >> ~/.bashrc && source ~/.bashrc
