@@ -4,18 +4,8 @@ MEAN stack port of the current dub.works website
 ## Cloning
 Run the following command:
 ```bash
-git clone https://github.com/omn0mn0m/vagrant-dubworks.git
+git clone https://github.com/omn0mn0m/dub.works.git
 ```
-
-Note that the repo will contain the [dub.works](https://github.com/ryansteed/dub.works) repo as a subtree. It will most likely need to be updated. To do that, run the follow commands:
-
-```bash
-git remote add -f dub.works https://github.com/ryansteed/dub.works.git
-git subtree pull --prefix public dub.works master --squash
-git push
-```
-
-This will add dub.works as a remote, pull the latest commits, and then push back to vagrant-dubworks so that the next time someone clones it, it will be up-to-date.
 
 ## Setting Up Vagrant
 Follow the instructions found [here](https://www.vagrantup.com/intro/getting-started/install.html). This project has been tested with VirtualBox, but should also work with VMware (someone please confirm this).
@@ -35,53 +25,42 @@ You can SSH into the virtual machine using the following:
 vagrant ssh
 ```
 
-The dub.works code can be found in `/var/www/public`. A live version can be found at http://192.168.33.10
+The dub.works code can be found in `/vagrant/dub.works`. A live version can be found at http://192.168.33.10:3000
+
+### Initial Access
+When you first open the project, you must do the following setup commands:
+
+```bash
+cd /vagrant/dub.works
+meteor npm install
+sudo chown -R $USER .meteor
+meteor
+```
+
+This wil start a live version of the site, which can be stopped with CTRL-C.
+
+## Pulling Latest Changes
+Pulling the latest changes are as simple as running the following commands from **outside** of Vagrant SSH:
+
+```bash
+git pull
+vagrant reload --provision
+```
+
+This will reload the VM and run the provisioning script, which will only install software that is not already present on the VM.
+
+## Pushing New Changes
+Pushing changes consists of commiting new changes and then pushing the commits to GitHub from **inside** of Vagrant SSH.
+
+```bash
+git add any-of-your-new-files
+git commit -a -m "Your changes here"
+git push
+```
 
 ## Closing the Virtual Machine
 Run the following command:
 
 ```bash
 vagrant halt
-```
-
-## Pulling Latest Changes
-Because of the subtree setup, it is important to distinguish between pulling from vagrant-dubworks or dub.works... This will be fixed in the future.
-
-### Website Changes
-To pull changes for the website:
-
-```bash
-git subtree pull --prefix public dub.works master --squash
-```
-
-### Vagrant Changes
-To pull changes for the Vagrant virtual machine:
-
-```bash
-git pull
-```
-
-## Pushing New Changes
-Because of the subtree setup, it is important to distinguish between pushing to vagrant-dubworks or dub.works... This will be fixed in the future.
-
-General commands to add new files for tracking and then commiting:
-
-```bash
-git add any-of-your-new-files
-git commit -a -m "Your changes here"
-```
-
-### Website Changes (Do these first)
-
-To push changes to the website:
-
-```bash
-git subtree push --prefix=public dub.works master
-```
-
-### Vagrant Changes (Do these second)
-To push changes to the Vagrant virtual machine:
-
-```bash
-git push
 ```
