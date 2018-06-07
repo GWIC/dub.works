@@ -1,5 +1,5 @@
 # dub.works
-[Meteor](https://www.meteor.com/) port of the current dub.works website
+[KeystoneJS](http://keystonejs.com/) port of the current dub.works website
 
 ## Installation
 ### Cloning
@@ -26,16 +26,20 @@ You can SSH into the virtual machine using the following:
 vagrant ssh
 ```
 
-The dub.works code can be found in `/vagrant/dub.works`. A live version can be found at http://192.168.33.10:3000
+The dub.works code can be found in `/vagrant/dub-works`. A live version can be found at http://192.168.33.10:3000
 
 ### Initial Access
 When you first open the project, you must do the following setup commands:
 
 ```bash
-cd /vagrant/dub.works
-meteor npm install
-sudo chown -R $USER .meteor
-meteor
+cd /vagrant/dub-works
+npm install
+```
+
+After installing NodeJS dependencies, you should download the `.env` file from the Slack channel. If you need this file, contact [omn0mn0m](mailto:tranngocnam97@gmail.com). This file contains secrets and keys and should not be commited to Git. After adding the `.env` file to dub-works, run the following:
+
+```bash
+node keystone
 ```
 
 This wil start a live version of the site, which can be stopped with CTRL-C.
@@ -51,7 +55,7 @@ vagrant reload --provision
 This will reload the VM and run the provisioning script, which will only install software that is not already present on the VM.
 
 ## Pushing New Changes
-Pushing changes consists of commiting new changes and then pushing the commits to GitHub from **inside** of Vagrant SSH.
+Pushing changes consists of commiting new changes and then pushing the commits to GitHub.
 
 ```bash
 git add any-of-your-new-files
