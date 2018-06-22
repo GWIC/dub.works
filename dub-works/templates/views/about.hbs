@@ -1,38 +1,92 @@
-<div class = "container">
-    <div class = "jumbotron">< img src = "dub-works/public/images/logo.png  alt="LOGO" width="160">
-            <h1> About Us</h1> 
-        <p> Our team: </p>
-        <p>                              Students </p>
-        </div>
-        <div class = "row">
-            <div class = "col-sm-3 col-md-6 col-lg-4" style="background-color:yellow;">
-            <!---pictures go above the names--->
-                < img src = "/newDubworks2/logo_pic.PNG alt="Sarah" width="160">
-            <p> Sarah Shavin - side projects </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="Konst" width="160">
-            <p> Konstantin Mitic - Product development, 3D-printer enthusiast, very motivated, doer </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="Mike" width="160">
-        <p> Michael Ready - Operations expert, driven, goal-oriented </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="IZ" width="160">
-        <p> Isabella Sardegna - Community Outreach Fellow </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="Ryan" width="160">
-        <p> Ryan Steed - Developer, analyst, modeler, co-founder, student, and other stuff </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="seb" width="160">
-        <p> Sebastian Lora - Mechanical Engineering Patent Law </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="JO" width="160">
-        <p> Joseph Schiarizzi - Founder of Fourth Wave and developer with goals </p>
-            <p>               Factulty Sponsors </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="An" width="160">
-        <p> Annamaria Konya Tannon - Evangelist </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="Rod" width="160">
-        <p> Rodney Lake - Investor </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="Erica" width="160">
-        <p> Erica Wortham - ethnographer, building creative infrastructure and curriculum </p>
-        < img src = "/newDubworks2/logo_pic.PNG alt="Ran" width="160">
-        <p> Randy Graves </p>
-        <p> Bojana Jankovic - Adventuresome student. Cat lover </p>
-        <p> Johnny Chou - Excel nerd </p>
-         </div>
-      </div>
+<!--Header -->
+	<header id="head-internal">
+		<div class="container">
+			<div class="row">
+				<h1 class="lead">Contact Us</h1>
+				<p class="tagline">Initial consultations are always free.</p>
+				<!--<p><a class="btn btn-default btn-lg" role="button">CONTACT US</a> <a class="btn btn-action btn-lg" role="button">OUR WORK</a></p>-->
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+<div class="container">
+<!-- Article main content -->
+			<article class="col-sm-9 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Contact Us</h1>
+				</header>
+				
+				<p>
+					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and we will get back to you as soon as we can. Please allow a couple days for the firm to respond.
+				</p>
+				<br>
+					<div class="col-sm-8 col-md-6">
+			{{#if enquirySubmitted}}
+			<h3>Thanks for getting in touch.</h3>
+			{{else}}
+			<form method="post">
+				<input type="hidden" name="action" value="contact">
+				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+					<label>Name</label>
+					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+				</div>
+				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+					<label>Email</label>
+					<input type="email" name="email" class="form-control" value="{{formData.email}}">
+				</div>
+				<div class="form-group">
+					<label>Phone</label>
+					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+				</div>
+				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+					<label>What are you contacting us about?</label>
+					<select name="enquiryType" class="form-control">
+						<option value="">(select one)</option>
+						{{#each enquiryTypes}}
+						<option value="{{value}}">{{label}}</option>
+						{{/each}}
+					</select>
+				</div>
+				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+					<label>Message</label>
+					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary">Send</button>
+				</div>
+			</form>
+			{{/if}}
+		</div>
+			</article>
+			<!-- /Article -->
+<aside class="col-sm-3 sidebar sidebar-right">
+				<div class="widget">
+					<h4>Address</h4>
+                    <h2>Helghast Design</h2>
+					<address>
+						 6320 Westwood Court<br> Edina, MN. 55436<br>
+                        <a href="#">helladesign@helghast.com</a>
+					</address>
+					<h4>Phone:</h4>
+					<address>
+						(713) 791-1414
+					</address>
+				</div>
+			</aside>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
