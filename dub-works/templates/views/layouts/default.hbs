@@ -3,44 +3,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>aia-demo</title>
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<title>dub.works</title>
+		<link rel="shortcut icon" href="dub-works/public/images/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.min.css" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-
-		
-		{{!-- This file provides the default styling for the KeystoneJS Content Editor 
-			- only renders when user is logged in and admin--}}
-		{{{isAdminEditorCSS user}}}
-		
-		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-		//- Safely remove this block if you are not targeting IE8 --}}
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
-		<![endif]-->
-		
+                <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+                <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">	
 	</head>
     
-    
-            <!-- handlebars navigation -->
-        <!--<div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left">
-                    {{# each navLinks}}
-                    <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-                        <a href="{{ href }}">{{ label }}</a>
-                    </li>
-                {{/each}}
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                {{#if user}}
-                <li><a href="/keystone/signout">Sign Out</a></li>
-                {{else}}
-                <li><a href="/keystone/signin">Sign In</a></li>
-                {{/if}}
-            </ul>
-        </div>-->
     
 <body class="home">
 <div class="navbar navbar-inverse navbar-fixed-top headroom" >
@@ -48,32 +17,31 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="/"><img src="/images/company-logo.png" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand js-scroll-trigger" href="http://dub.works/"><span class="color-secondary">dub</span>.works</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
+                        <nav>
+			        <ul class="nav navbar-nav pull-right">
 					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/contact">Contact</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="/residential">Residential</a></li>
-							<li><a href="/commercial">Commerical</a></li>
-						</ul>
+					<li><a href="/gallery">About</a></li>
+					<li><a href="/contact/">Contact</a></li>
+			                {{#if user}}
+			                <li><a href="/keystone/signout">Sign Out</a></li>
+               			        {{else}}
+               			        <li><a href="/keystone/signin">Sign In</a></li>
+               			        {{/if}}
 				</ul>
+                         </nav>
 			</div><!--/.nav-collapse -->
 		</div>
 	</div> 
 	<!-- /.navbar -->
 
 	<!-- Header -->
-	<header id="head">
+		<header id="head">
 		<div class="container">
 			<div class="row">
-				<h1 class="lead">MODERN SUSTAINABLE LIVEABLE SPACES</h1>
-				<p class="tagline">HELGHAST DESIGN is a modern residential and commercial architecture firm located in Minneapolis, MN.</p>
-				<p><a href="/contact" class="btn btn-default btn-lg" role="button">CONTACT US</a> <a href="/work" class="btn btn-action btn-lg" role="button">OUR WORK</a></p>
+				<h1 class="lead">DUB.WORKS</h1>
 			</div>
 		</div>
 	</header>
@@ -129,23 +97,22 @@
 					</div>
 
 					<div class="col-md-3 widget">
-						<h3 class="widget-title">Follow me</h3>
+						<h3 class="widget-title">Follow us!</h3>
 						<div class="widget-body">
 							<p class="follow-me-icons">
-								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-								<a href=""><i class="fa fa-github fa-2"></i></a>
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
-							</p>	
+								<a href="https://twitter.com/gwinnocenter?lang=en"><i class="fa fa-twitter fa-2"></i></a>
+								<a href="https://www.instagram.com/gwinnovationcenter/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.facebook.com/gwinnovationcenter/"><i class="fa fa-facebook fa-2"></i></a>
+							</p>
 						</div>
 					</div>
 
-					<div class="col-md-6 widget">
+                   		<!----	<div class="col-md-6 widget">
 						<h3 class="widget-title">Text widget</h3>
 						<div class="widget-body">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
 							<p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
-						</div>
+						</div>  -->
 					</div>
 
 				</div> <!-- /row of widgets -->
@@ -161,7 +128,7 @@
 								<a href="#">Home</a> | 
 								<a href="sidebar-right.html">Services</a> |
 								<a href="/residential">Residential</a> |
-                                <a href="/commercial">Commercial</a> |
+                                                                <a href="/gallery">About</a> |
 								<b><a href="/contact">Contact</a></b>
 							</p>
 						</div>
@@ -170,7 +137,7 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="text-right">
-								Copyright &copy; 2014, <a href="http://thirteen.mn" rel="designer">Six13 Technologies</a> 
+								Copyright &copy; 2018, <a href="http://thirteen.mn" rel="designer">Six13 Technologies</a> 
 							</p>
 						</div>
 					</div>
