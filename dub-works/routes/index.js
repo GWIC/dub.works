@@ -93,6 +93,7 @@ exports = module.exports = function (app) {
 	app.get('/about', routes.views.about);
 	app.get('/mentoring', routes.views.mentoring);
 	app.get('/creates', routes.views.creates);
+	app.get('/prints', routes.views.prints);
 
 	app.get('/showbag', routes.views.showbag);
 

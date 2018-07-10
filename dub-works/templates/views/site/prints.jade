@@ -4,8 +4,18 @@ include ../../mixins/organiser
 
 block intro
 	.page-intro: .container
-		h1.page-title dub.creates
-		p.lead Coming soon...
+		h1.page-title dub.prints
+		p.lead dub.works owns and operates three Prusa i3 MK2S printers.
+
+		.row: .col-sm-4.col-sm-offset-4
+			a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).js-auth-trigger.btn.btn-lg.btn-block.btn-primary.mv-1
+				span.text-caps Request a Print
+		
+		h2.page-title Print Cam
+		
+		video#video(width="360", controls='')
+		video#video1(width="360", controls='')
+		video#video2(width="360", controls='')		
 
 block js
 	// twitter
