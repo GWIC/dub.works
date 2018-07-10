@@ -28,7 +28,7 @@
     "keystone": "^4.0.0-beta.7",
     "keystone-email": "^1.0.5",
     "lodash": "3.10.1",
-    "moment": "2.12.0",
+    "moment": "2.19.3",
     "newrelic": "1.26.2",
     "passport": "0.3.2",
     "passport-facebook": "2.1.1",
