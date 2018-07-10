@@ -94,6 +94,7 @@ exports = module.exports = function (app) {
 	app.get('/mentoring', routes.views.mentoring);
 	app.get('/creates', routes.views.creates);
 	app.get('/prints', routes.views.prints);
+	app.all('/contact', routes.views.contact);
 
 	app.get('/showbag', routes.views.showbag);
 
