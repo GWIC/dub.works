@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 
 	locals.section = 'about';
-	locals.page.title = 'About SydJS';
+	locals.page.title = 'About dub.works';
 
 	locals.organisers = [
 		{ name: 'Craig Sharkie', image: '/images/organisers/sharkie_400_round.png', twitter: 'twalve', title: 'Founder, MC, Coordinator', profile: '/member/sharkie' },

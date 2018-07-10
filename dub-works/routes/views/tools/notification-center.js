@@ -73,7 +73,7 @@ exports = module.exports = function(req, res) {
 	});
 
 
-	// Notify all SydJS subscribers
+	// Notify all dub.works subscribers
 
 	view.on('post', { action: 'notify.subscriber' }, function(next) {
 		if (!locals.subscribers) {
@@ -88,11 +88,11 @@ exports = module.exports = function(req, res) {
 					link_url: req.body.subscriber_email_link_url,
 					host: 'http://www.sydjs.com',
 				}, {
-					subject: req.body.subscriber_email_subject || 'Notification from SydJS',
+					subject: req.body.subscriber_email_subject || 'Notification from dub.works',
 					to: subscriber.email,
 					from: {
-						name: 'SydJS',
-						email: 'hello@sydjs.com'
+						name: 'dub.works',
+						email: 'hello@dub.works'
 					}
 				}, doneSubscriber);
 			}, function(err) {
