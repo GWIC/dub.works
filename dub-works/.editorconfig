@@ -7,8 +7,11 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = false
 insert_final_newline = true
-indent_style = tab
 
-[{*.yml,*.json}]
-indent_style = space
+[*.jade]
+indent_style = tab
+indent_size = 4
+
+[*.less]
+indent_style = tab
 indent_size = 2

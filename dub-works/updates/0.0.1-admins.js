@@ -1,49 +1,26 @@
-/**
- * This script automatically creates a default Admin user when an
- * empty database is used for the first time. You can use this
- * technique to insert data into any List you have defined.
- *
- * Alternatively, you can export a custom function for the update:
- * module.exports = function(done) { ... }
- */
-
-exports.create = {
-	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'tranngocnam97@gmail.com', 'password': 'admin', 'isAdmin': true },
-	],
-};
-
-/*
-
-// This is the long-hand version of the functionality above:
-
-var keystone = require('keystone');
-var async = require('async');
-var User = keystone.list('User');
+var keystone = require('keystone'),
+	async = require('async'),
+	User = keystone.list('User');
 
 var admins = [
 	{ email: 'user@keystonejs.com', password: 'admin', name: { first: 'Admin', last: 'User' } }
 ];
 
-function createAdmin (admin, done) {
-
-	var newAdmin = new User.model(admin);
-
-	newAdmin.isAdmin = true;
-	newAdmin.save(function (err) {
-		if (err) {
-			console.error('Error adding admin ' + admin.email + ' to the database:');
-			console.error(err);
-		} else {
-			console.log('Added admin ' + admin.email + ' to the database.');
-		}
-		done(err);
+function createAdmin(admin, done) {
+	User.model.findOne({ email: admin.email }).exec(function(err, user) {
+		admin.isAdmin = true;
+		new User.model(admin).save(function(err) {
+			if (err) {
+				console.error("Error adding admin " + admin.email + " to the database:");
+				console.error(err);
+			} else {
+				console.log("Added admin " + admin.email + " to the database.");
+			}
+			done();
+		});
 	});
-
 }
 
-exports = module.exports = function (done) {
+exports = module.exports = function(done) {
 	async.forEach(admins, createAdmin, done);
 };
-
-*/

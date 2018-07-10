@@ -1,2 +1,2 @@
-public/js/bootstrap
-public/js/jquery
+# node_modules ignored by default
+public/js/lib

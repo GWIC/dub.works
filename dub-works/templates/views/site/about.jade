@@ -1,0 +1,18 @@
+extends ../../layouts/default
+
+//include ../../mixins/organiser
+
+//block content
+//	.page-content
+//		.section.highlight: .container
+//			//- h2 Organisers
+//			//- p.lead Each month the SydJS team works to bring you great presenters in a great venue.
+//			.row.about-organisers.col-md-offset-1
+//				each org in organisers
+//					.col-sm-4
+//						+organiser(org)
+		
+block js
+	// twitter
+	script.
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
