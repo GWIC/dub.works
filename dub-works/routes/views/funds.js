@@ -6,8 +6,8 @@ exports = module.exports = function (req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
-	locals.section = 'contact';
-	locals.page.title = 'Contact - dub.works';
+	locals.section = 'funds';
+	locals.page.title = 'Funding - dub.works';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
@@ -31,7 +31,7 @@ exports = module.exports = function (req, res) {
 
 	});
 
-	view.render('site/contact');
+	view.render('site/funds');
 
 }
 

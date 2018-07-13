@@ -95,6 +95,7 @@ exports = module.exports = function (app) {
 	app.get('/creates', routes.views.creates);
 	app.get('/prints', routes.views.prints);
 	app.all('/contact', routes.views.contact);
+	app.all('/funds', routes.views.funds);
 
 	app.get('/showbag', routes.views.showbag);
 
