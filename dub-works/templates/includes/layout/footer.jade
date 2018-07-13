@@ -6,7 +6,7 @@ footer.site-footer.site-footer--sticky: .container
 			p 725 23rd St NW, Washington, DC 20052
 			p Mezzanine Floor
 			ul.list-inline
-				li: a(href='/about') More about dub.works
+				//- li: a(href='/about') More about dub.works
 				li: a(href='mailto:contact@dub.works') Contact us
 
 		.col-sm-8
@@ -16,13 +16,24 @@ footer.site-footer.site-footer--sticky: .container
 					ul
 						li: a(href='/organisations') Organisations
 						li: a(href='https://github.com/GWIC') GitHub
-						li: a(href='/showbag') Merchandise
+						//- li: a(href='/showbag') Merchandise
 				.col-xs-4
 					h5.footer-heading Partners
 					ul: each sponsor in sponsors
 						li 
 							a(href= sponsor.website, rel='external')= sponsor.name 
 							i
+				.col-xs-4
+					h5.footer-heading Admin Access
+					ul
+						if user
+							li: a(href='/me').user
+								img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27)=user.name.first
+							li: a(href='/signout')
+								span.hidden-md Sign out
+								span.entypo.entypo-large.entypo-logout
+						else
+							li: a(href='/signin', data-from=page.path, data-initial='sign-in').js-auth-trigger Sign in
 	.row.footer-copyright
 		p Copyright &copy; 2018 dub.works. Powered by <a href='http://keystonejs.com' rel='external'>KeystoneJS</a>.
 		p Template <a href="https://github.com/JedWatson/sydjs-site" rel='external'>sydjs-site</a>.
