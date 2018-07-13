@@ -38,7 +38,7 @@ keystone.init({
 	'session store': 'mongo',
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': process.env.COOKIE_SECRET || 'dub.works',
+	'cookie secret': process.env.COOKIE_SECRET || 'sydjs',
 
 	'mandrill api key': process.env.MANDRILL_KEY,
 
