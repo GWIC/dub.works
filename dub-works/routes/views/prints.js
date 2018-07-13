@@ -7,7 +7,7 @@ exports = module.exports = function(req, res) {
 	locals.section = 'prints';
 
 	locals.section = 'prints';
-	locals.page.title = 'Prints - SydJS';
+	locals.page.title = 'Prints - dub.works';
 
 	view.render('site/prints');
 
