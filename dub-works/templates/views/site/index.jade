@@ -12,7 +12,7 @@ block intro
 
 	//- HERO
 	if !meetup
-		h2.text-center We innovate innovatively.
+		h1.text-center dub.works
 	else
 		article#hero.hero-meetup.hero-meetup--next
 			
@@ -79,13 +79,27 @@ block intro
 //- BODY
 block content
 	.page-content
-		
 		//- About
 		article.section.section--featured.home-about: .container
-			h2 What We Do
-			.row: .col-sm-8.col-sm-offset-2
-				p.lead Dub Works is the student-run organization managing the GW Innovation Center in Tompkins Hall on the Foggy Bottom campus, the first dedicated physical place for cross- departmental and multidisciplinary innovation on campus. Dub Works provides a supportive climate for ideation, creativity and entrepreneurial thinking; and it leverages existing resources to engage students, faculty, staff, alumni, and leaders from the community to address critical challenges.
-				p.lead The focal point of the Dub Works is to facilitate knowledge transfer and acquisition of hands- on skills, new domain exploration, interaction with peers from other disciplines, alumni, and like-minded people. The Dub Works aids discussions around disruptive ideas, exposure to art and affords real-world opportunities for GW students aspiring to create value for others.
+			h1.text-center What We Do
+			.row
+				.col-md-4.col-md-offset-1
+					p.lead Dub Works is the student-run organization managing the GW Innovation Center in Tompkins Hall on the Foggy Bottom campus, the first dedicated physical place for cross- departmental and multidisciplinary innovation on campus. Dub Works provides a supportive climate for ideation, creativity and entrepreneurial thinking; and it leverages existing resources to engage students, faculty, staff, alumni, and leaders from the community to address critical challenges.
+
+				.col-md-4.col-md-offset-1
+					.img-wrapper
+						img(src='/images/welcome.jpg', alt='Welcome!', style='width:100%')
+
+			br
+
+			.row
+				.col-md-4.col-md-offset-1
+					.img-wrapper
+						img(src='/images/room.jpg', alt='A cool room!', style='width:100%')
+
+				.col-md-4.col-md-offset-1
+					p.lead The focal point of the Dub Works is to facilitate knowledge transfer and acquisition of hands- on skills, new domain exploration, interaction with peers from other disciplines, alumni, and like-minded people. The Dub Works aids discussions around disruptive ideas, exposure to art and affords real-world opportunities for GW students aspiring to create value for others.
+
 			if !user
 				.row: .col-sm-4.col-sm-offset-4
 					a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-lg.btn-block.btn-primary.mv-1
@@ -98,9 +112,17 @@ block content
 
 	.page-content
 		.section.highlight: .container
-			h2.text-center Who We Are
+			h1.text-center Who We Are
+
+			h2.text-center Students
 			.row.about-organisers.col-md-offset-1
 				each org in organisers
+					.col-sm-4
+						+organiser(org)
+
+			h2.text-center Faculty Sponsors
+			.row.about-organisers.col-md-offset-1
+				each org in organisers1
 					.col-sm-4
 						+organiser(org)
 

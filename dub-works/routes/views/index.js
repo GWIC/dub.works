@@ -20,10 +20,26 @@ exports = module.exports = function(req, res) {
 
 	// Organisers
         locals.organisers = [
-                { name: 'Nam Tran', image: '/images/organisers/sharkie_400_round.png', twitter: 'twalve', title: 'Web Dev Lead', profile: '/member/nam-tran' },
-                { name: 'Becky Shanley', image: '/images/organisers/jedwatson_400_round.png', twitter: 'jedwatson', title: 'Web Dev', profile: '/member/jed-watson' },
-                { name: 'Mariamawit Lisanu', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' }
+                { name: 'Nam Tran', image: '/images/organisers/sharkie_400_round.png', twitter: 'obnoxiousDeity', title: 'Web Dev Lead', profile: '/member/nam-tran' },
+                { name: 'Becky Shanley', image: '/images/organisers/jedwatson_400_round.png', title: 'Web Dev', profile: '/member/jed-watson' },
+                { name: 'Mariamawit Lisanu', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Steve', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Sarah', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Mimosa', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Michael', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Konstantin', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Kaitlin', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Erin', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Connor', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Anni', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Andras', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' }
         ]
+
+	locals.organisers1 = [
+                { name: 'Randy', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Erica', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' },
+                { name: 'Annamaria', image: '/images/organisers/johnvanderloo_400_round.png', twitter: 'geekyjohn', title: 'Web Dev', profile: '/member/john-van-der-loo' }
+	]
 
 	// Load the first, NEXT meetup
 
