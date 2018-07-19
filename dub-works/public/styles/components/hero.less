@@ -6,8 +6,8 @@
 **/
 
 // General styles
-@hero-intro-height-sm: 420px;
-@hero-intro-height-xs: 420px; // was 420px
+@hero-intro-height-sm: 100vh;
+@hero-intro-height-xs: 100vh; // was 420px
 #hero {
 	position: relative;
 	.hero-intro {
@@ -15,31 +15,28 @@
 		height: @hero-intro-height-sm;
 		color: white;
 		text-align: center;
-		margin-top: -(@navbar-height + 10)*2;
-
-		//- Increase the height on big screens
-		@media (min-width: 1600px) {
-			height: @hero-intro-height-sm * 2;
-		}
+		margin-top: -(@navbar-height)*2;
 
 		.hero-background {
 			.ground;
-			position: absolute;
+			background: url("/images/hero.jpg") no-repeat center center;
 			top: 0;
 			left: 0;
+			background-size: cover;
 			display: block;
-			width: 100%;
-			height: 100%;
-			img {
-				width: 100%;
-			}
-
+			height: 100vh;
+			// width: 100vh;
+			
 			// Scrolling effect
 			&.position-fixed {
 				position: fixed;
 			}
 			&.position-absolute {
 				position: absolute;
+			}
+
+			&.position-relative {
+				position: relative;
 			}
 		}
 		.hero-intro-content {
