@@ -10,9 +10,10 @@ Enquiry.add({
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
-		{ value: 'message', label: "Just leaving a message" },
-		{ value: 'question', label: "I've got a question" },
-		{ value: 'other', label: "Something else..." },
+		{ value: 'volunteer',	label: "I want to volunteer" },
+		{ value: 'idea',	label: "I have an idea/suggestion" },
+		{ value: 'question',	label: "I've got a question" },
+		{ value: 'other',	label: "Something else..." },
 	], required: true },
 	message: { type: Types.Textarea, required: true },
 });

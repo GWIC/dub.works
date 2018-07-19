@@ -1,6 +1,5 @@
 extends ../../layouts/default
 
-
 //- INCLUDES
 include ../../mixins/post
 include ../../mixins/meetup-talk
@@ -9,13 +8,19 @@ include ../../mixins/organiser
 
 //- INTRO
 block intro
-	article#hero.hero-meetup.hero-meetup--next		
+	article#hero.hero-meetup
 		//- Intro
 		section.hero-intro.hero-intro--hasmask
-			.hero-background
-				img(src='/images/placeholders/sydney-1.jpg')
+			.hero-background.position-absolute
+				img(src='/images/hero.jpg')
 			.hero-intro-content
-				h1.title dub.works
+				h1.title dub.
+					.slidingVertical
+						span works
+						span ideates
+						span builds
+						span creates
+						span happens
 
 //- BODY
 block content
@@ -25,13 +30,15 @@ block content
 			h1.text-center What We Do
 			.row
 				.col-md-4.col-md-offset-1
-					p.lead Dub Works is the student-run organization managing the GW Innovation Center in Tompkins Hall on the Foggy Bottom campus, the first dedicated physical place for cross- departmental and multidisciplinary innovation on campus. Dub Works provides a supportive climate for ideation, creativity and entrepreneurial thinking; and it leverages existing resources to engage students, faculty, staff, alumni, and leaders from the community to address critical challenges.
+					p.lead Dub Works is the student-run organization managing the GW Innovation Center in Tompkins Hall on the Foggy Bottom campus, the first dedicated physical place for cross- departmental and multidisciplinary innovation on campus.
 
 				.col-md-4.col-md-offset-1
 					.img-wrapper
 						img(src='/images/welcome.jpg', alt='Welcome!', style='width:100%')
 
-			br
+			.row
+				.col-md-9.col-md-offset-1
+					p.lead Dub Works provides a supportive climate for ideation, creativity and entrepreneurial thinking; and it leverages existing resources to engage students, faculty, staff, alumni, and leaders from the community to address critical challenges.
 
 			.row
 				.col-md-4.col-md-offset-1
@@ -51,22 +58,6 @@ block content
 				a(href='/members') Find your friends in dub.works
 			p.mt-1: a(href="https://twitter.com/gwinnocenter", class="twitter-follow-button", data-show-count="true", data-size="large") Follow @gwinnocenter
 
-	.page-content
-		.section.highlight: .container
-			h1.text-center Who We Are
-
-			h2.text-center Students
-			.row.about-organisers.col-md-offset-1
-				each org in organisers
-					.col-sm-4
-						+organiser(org)
-
-			h2.text-center Faculty Sponsors
-			.row.about-organisers.col-md-offset-1
-				each org in organisers1
-					.col-sm-4
-						+organiser(org)
-
 //- JS
 block js
 
@@ -84,3 +75,11 @@ block js
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 	if google_api_key
 		script(src!='https://maps.googleapis.com/maps/api/js?key=' + google_api_key + '&libraries=places')
+
+	script.
+		 $(document).ready(function(){
+			 $(window).scroll(function(){
+				 $("#hero").css("opacity", 1 - $(window).scrollTop() / ($('#hero').height() / 2));
+			});
+		});
+

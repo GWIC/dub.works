@@ -1,16 +1,50 @@
 extends ../../layouts/default
 
-//include ../../mixins/organiser
+include ../../mixins/organiser
+include ../../mixins/post
+include ../../mixins/meetup-talk
 
-//block content
-//	.page-content
-//		.section.highlight: .container
-//			//- h2 Organisers
-//			//- p.lead Each month the SydJS team works to bring you great presenters in a great venue.
-//			.row.about-organisers.col-md-offset-1
-//				each org in organisers
-//					.col-sm-4
-//						+organiser(org)
+
+block intro
+	article#hero.hero-meetup.hero-meetup--next
+		section.hero-intro.hero-intrto--hasmask
+			.hero-background
+				img(src='images/placeholders/sydney-1.jpg')
+			.hero-intro-content
+			//	h1.title About Us
+block content
+	.page-content
+		.section.highlight: .container
+			h1 Who We Are
+			p.lead WAITING FOR THE TEXT TO BE APPROVED BY SARAH. jUST NEED TO COPY AND PASTE
+			br
+			br
+			p.lead Statistics Bar
+			.stats
+				.stats-cell
+					h3 Students
+					p.lead XXXX
+				.stats-cell
+					h3 Funding
+					p.lead XXXX
+			h3.text-center Meet the team behind the innovation center
+			h4.text-center Senior Fellows
+			.row.about-organisers.col-md-offset-1
+				each org in organisers
+					.col-sm-4
+						+organiser(org)
+			br
+			h4.text-center Faculty Sponsors
+			.row.about-organisers.col-md-offset-1
+				each org in organisers1
+					.col-sm-4
+						+organiser(org)
+			br
+			h4.text-center Students
+			.row.about-organisers.col-md-offset-1
+				each org in organisers2
+					.col-sm-4
+						+organiser(org)
 		
 block js
 	// twitter

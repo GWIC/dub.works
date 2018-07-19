@@ -35,5 +35,9 @@ $(function() {
 			$("#header").removeClass("headroom--middle").addClass('headroom--not-middle');
 		}
 	});
-});
 
+	$(document).ready(function(){
+        	$(window).scroll(function(){
+           	 $("#hero").css("opacity", 1 - $(window).scrollTop() / ($('#hero').height() / 2));
+       		 });
+   	 });

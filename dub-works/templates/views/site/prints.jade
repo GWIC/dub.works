@@ -32,7 +32,7 @@ block js
 		if(Hls.isSupported()) {
 			// Video
 			var hls = new Hls();
-			hls.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com/hls/stream.m3u8');
+			hls.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream.m3u8');
 			hls.attachMedia(video);
 			hls.on(Hls.Events.MANIFEST_PARSED,function() {
 				video.play();
@@ -40,7 +40,7 @@ block js
 	
 			// Video 1
 			var hls1 = new Hls();
-			hls1.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com/hls/stream1.m3u8');
+			hls1.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream1.m3u8');
 			hls1.attachMedia(video1);
 			hls1.on(Hls.Events.MANIFEST_PARSED,function() {
 				video1.play();
@@ -48,7 +48,7 @@ block js
 
 			// Video 2
 			var hls2 = new Hls();
-			hls2.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com/hls/stream2.m3u8');
+			hls2.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream2.m3u8');
 			hls2.attachMedia(video2);
 			hls2.on(Hls.Events.MANIFEST_PARSED,function() {
 				video2.play();

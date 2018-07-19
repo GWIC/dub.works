@@ -2,7 +2,7 @@
 // ------------------------------
 #header {
 	line-height: @navbar-height + 7;
-	background-color: @navbar-default-bg;
+	background-color: white;
 	height: @navbar-height + 10;
 	.floor;
 	.ceiling;
@@ -10,14 +10,14 @@
 
 // Header on home page
 #header.header--home {
-	background-color: black;
+	background-color: white;
 }
 
 /*
 // Navbar on home page
 #header.header--home {
 	&.headroom--top .navbar {
-		background-color: black;
+		background-color: transparent;
 	}
 	&.headroom--not-top.slideDown .navbar,
 	&.headroom--not-top.headroom--middle.slideUp .navbar {
@@ -28,7 +28,7 @@
 // Navbar on other page
 #header.header--page {
 	.navbar {
-		background-color: fade(@navbar-default-bg, 98%);
+		background-color: transparent;
 	}
 }
  */
@@ -79,19 +79,19 @@ nav {
 		display: inline-block;
 	}
 	> li > a {
-		.transition( all 0.1s ease );
+		.transition( all 0.5s ease );
 		display: block;
 		padding-top: 3px;
 		padding-right: 15px;
 		padding-left: 15px;
 		outline: none;
-		color: fade(white, 60%);
+		color: fade(black, 80%);
 		text-transform: uppercase;
-		font-weight: 300;
+		font-weight: 500;
 		font-size: @font-size-base * 1.1;
 
 		&:hover {
-			color: white;
+			color: #ffb347;
 			text-decoration: none;
 		}
 		&:active,
@@ -101,8 +101,8 @@ nav {
 		}
 	}
 	> li.active > a {
-		background: mix(@navbar-default-bg, black, 95%);
-		color: white;
+		background: transparent;
+		color: #ffb347;
 	}
 	> li > a.user {
 		text-transform: none;
@@ -110,6 +110,9 @@ nav {
 			margin-right: 5px;
 		}
 	}
+}
+.navbar-text-about{
+	color: #fff;
 }
 
 .navbar-nav.navbar-nav--left {
@@ -159,7 +162,7 @@ nav {
 			width: 24px;
 			height: 2px;
 			border-radius: 2px;
-			background: fade( white, 50% );
+			background: fade( black, 50% );
 
 			&:before, &:after {
 				.transition(all 0.2s ease);
@@ -169,7 +172,7 @@ nav {
 				width: 24px;
 				height: 2px;
 				border-radius: 2px;
-				background: fade( white, 50% );
+				background: fade( black, 50% );
 				content: '';
 			}
 

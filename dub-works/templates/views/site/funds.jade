@@ -15,7 +15,7 @@ block content
 			.row
 				.col-md-8
 					form(method='post').form-horizontal
-						input(type='hidden', name='action', value='contact')
+						input(type='hidden', name='action', value='fundRequest')
 						.form-group(class=validationErrors.name ? 'has-error' : null)
 							label.col-sm-2.text-left.control-label Name
 							.col-sm-10
@@ -28,17 +28,35 @@ block content
 							label.col-sm-2.control-label Phone
 							.col-sm-10
 								input(type='text' name='phone' value=formData.phone placeholder='(optional)').form-control
-						.form-group(class=validationErrors.enquiryType ? 'has-error' : null required)
-							label.col-sm-2.control-label Regarding
-							.col-sm-10
-								select(name='enquiryType').form-control
-									option(value='') (required)
-									each type in enquiryTypes
-										option(value=type.value selected=formData.enquiryType === type.value)= type.label
 						.form-group(class=validationErrors.message ? 'has-error' : null)
-							label.col-sm-2.control-label Message
+							label.col-sm-2.control-label Website/App/Blog/Youtube
 							.col-sm-10
-								textarea(name='message' placeholder='Leave us a message...' rows=4 required).form-control= formData.message
+								input(type='text' name='website' value=formData.website placeholder='(optional)').form-control
+						.form-group(class=validationErrors.message ? 'has-error' : null)
+							label.col-sm-2.control-label Concept & Product Description
+							.col-sm-10
+								textarea(name='message' placeholder='200-word maximum' rows=4 required).form-control= formData.concept
+						.form-group(class=validationErrors.message ? 'has-error' : null)
+							label.col-sm-2.control-label Target Market & Why Customers Would Buy
+							.col-sm-10
+								textarea(name='message' placeholder='Leave us a message...' rows=4).form-control= formData.customers
+						.form-group(class=validationErrors.message ? 'has-error' : null)
+							label.col-sm-2.control-label Financials
+							.col-sm-10
+								textarea(name='message' placeholder='Cost structure, funds use, revenue' rows=4 required).form-control= formData.financials
+						.form-group(class=validationErrors.message ? 'has-error' : null)
+							label.col-sm-2.control-label Social Impact Statement
+							.col-sm-10
+								textarea(name='message' placeholder='If applicable' rows=2).form-control= formData.impact
+						.form-group(class=validationErrors.message ? 'has-error' : null)
+							label.col-sm-2.control-label Sustainability Statement
+							.col-sm-10
+								textarea(name='message' placeholder='If applicable' rows=2).form-control= formData.sustainability
+						.form-group(class=validationErrors.message ? 'has-error' : null)
+							label.col-sm-2.control-label Needs beyond funding
+							.col-sm-10
+								textarea(name='message' placeholder='Resources, legal advice, mentorships, etc.' rows=2).form-control= formData.needs
+
 						.form-group
 							.col-sm-10.col-sm-offset-2
 								p.help-block Note: others can see your enquiry in the <a href='/keystone/enquiries'>Admin UI</a>

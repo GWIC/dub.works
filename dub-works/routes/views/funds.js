@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var Enquiry = keystone.list('Enquiry');
+var FundRequest = keystone.list('FundRequest');
 
 exports = module.exports = function (req, res) {
 
@@ -8,14 +8,13 @@ exports = module.exports = function (req, res) {
 
 	locals.section = 'funds';
 	locals.page.title = 'Funding - dub.works';
-	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;
 
-	view.on('post', { action: 'contact' }, function (next) {
+	view.on('post', { action: 'fundRequest' }, function (next) {
 
-		var application = new Enquiry.model();
+		var application = new FundRequest.model();
 		var updater = application.getUpdateHandler(req);
 
 		updater.process(req.body, {
