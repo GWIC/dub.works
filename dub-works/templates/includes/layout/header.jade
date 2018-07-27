@@ -13,15 +13,15 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 			//- Patty
 			a#site-nav-toggle(href='javascript:;').site-nav-toggle
 				.patty
-				
+
 		#site-nav
 			nav(role='navigation')
 				ul.navbar-nav.navbar-nav--left
 					each link in navLinks
 						li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
 				ul.navbar-nav.navbar-nav--right
-				
-						li: a(href='/Join', data-from=page.path).js-auth-trigger Join
+
+						li: a(href='/Join', data-from=page.path).js-auth-trigger Join GWIC
 //-if user
 //-						li: a(href='/me').user
 //-								img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle

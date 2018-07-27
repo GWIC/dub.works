@@ -9,7 +9,7 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res),
 		locals = res.locals;
 
-	locals.section = 'meetups';
+	locals.section = 'events';
 	locals.page.title = 'News and Events - dub.works';
 
 	view.query('upcomingMeetup',
@@ -41,6 +41,6 @@ exports = module.exports = function(req, res) {
 
 	});
 
-	view.render('site/meetups');
+	view.render('site/events');
 
 }

@@ -79,8 +79,8 @@ exports = module.exports = function (app) {
 
 	// Website
 	app.get('/', routes.views.index);
-	app.get('/meetups', routes.views.meetups);
-	app.get('/meetups/:meetup', routes.views.meetup);
+	app.get('/events', routes.views.events);
+	app.get('/events/:meetup', routes.views.meetup);
 	app.get('/members', routes.views.members);
 	app.get('/members/mentors', routes.views.mentors);
 	app.get('/member/:member', routes.views.member);

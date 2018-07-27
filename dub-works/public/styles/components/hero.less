@@ -1,7 +1,7 @@
 /**
 *
 * Hero
-* 
+*
 *
 **/
 
@@ -10,6 +10,225 @@
 @hero-intro-height-xs: 100vh; // was 420px
 #hero {
 	position: relative;
+
+	.hero-intro-sm {
+		position: relative;
+		height: 50vh;
+		color: white;
+		text-align: center;
+		margin-top: -(@navbar-height)*2;
+
+		.hero-background {
+			.ground;
+			background: url("/images/hero.jpg") no-repeat center center;
+			top: 0;
+			left: 0;
+			background-size: cover;
+			display: block;
+			height: 50vh;
+			// width: 100vh;
+
+			// Scrolling effect
+			&.position-fixed {
+				position: fixed;
+			}
+			&.position-absolute {
+				position: absolute;
+			}
+
+			&.position-relative {
+				position: relative;
+			}
+		}
+		.hero-intro-content {
+			.hv-centered;
+			width: 90%;
+		}
+		.title {
+			color: currentColor;
+			text-transform: uppercase;
+			font-weight: 900;
+
+			/*Vertical Sliding*/
+			.slidingVertical{
+				display: inline;
+				text-indent: 8px;
+			}
+
+			.slidingVertical span{
+				animation: topToBottom 12.5s linear infinite 0s;
+				-ms-animation: topToBottom 12.5s linear infinite 0s;
+				-webkit-animation: topToBottom 12.5s linear infinite 0s;
+				opacity: 0;
+				overflow: hidden;
+				position: absolute;
+			}
+
+			.slidingVertical span:nth-child(2){
+				animation-delay: 2.5s;
+				-ms-animation-delay: 2.5s;
+				-webkit-animation-delay: 2.5s;
+			}
+
+			.slidingVertical span:nth-child(3){
+				animation-delay: 5s;
+				-ms-animation-delay: 5s;
+				-webkit-animation-delay: 5s;
+			}
+
+			.slidingVertical span:nth-child(4){
+				animation-delay: 7.5s;
+				-ms-animation-delay: 7.5s;
+				-webkit-animation-delay: 7.5s;
+			}
+
+			.slidingVertical span:nth-child(5){
+				animation-delay: 10s;
+				-ms-animation-delay: 10s;
+				-webkit-animation-delay: 10s;
+			}
+
+			/*topToBottom Animation*/
+			@-moz-keyframes topToBottom{
+				0% { opacity: 0; }
+				5% { opacity: 0; -moz-transform: translateY(-50px); }
+				10% { opacity: 1; -moz-transform: translateY(0px); }
+				25% { opacity: 1; -moz-transform: translateY(0px); }
+				30% { opacity: 0; -moz-transform: translateY(50px); }
+				80% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+
+			@-webkit-keyframes topToBottom{
+				0% { opacity: 0; }
+				5% { opacity: 0; -webkit-transform: translateY(-50px); }
+				10% { opacity: 1; -webkit-transform: translateY(0px); }
+				25% { opacity: 1; -webkit-transform: translateY(0px); }
+				30% { opacity: 0; -webkit-transform: translateY(50px); }
+				80% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+
+			@-ms-keyframes topToBottom{
+				0% { opacity: 0; }
+				5% { opacity: 0; -ms-transform: translateY(-50px); }
+				10% { opacity: 1; -ms-transform: translateY(0px); }
+				25% { opacity: 1; -ms-transform: translateY(0px); }
+				30% { opacity: 0; -ms-transform: translateY(50px); }
+				80% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+		}
+	}.hero-intro {
+		position: relative;
+		height: @hero-intro-height-sm;
+		color: white;
+		text-align: center;
+		margin-top: -(@navbar-height)*2;
+
+		.hero-background {
+			.ground;
+			background: url("/images/hero.jpg") no-repeat center center;
+			top: 0;
+			left: 0;
+			background-size: cover;
+			display: block;
+			height: @hero-intro-height-sm;
+			// width: 100vh;
+
+			// Scrolling effect
+			&.position-fixed {
+				position: fixed;
+			}
+			&.position-absolute {
+				position: absolute;
+			}
+
+			&.position-relative {
+				position: relative;
+			}
+		}
+		.hero-intro-content {
+			.hv-centered;
+			width: 90%;
+		}
+		.title {
+			color: currentColor;
+			text-transform: uppercase;
+			font-weight: 900;
+
+			/*Vertical Sliding*/
+			.slidingVertical{
+				display: inline;
+				text-indent: 8px;
+			}
+
+			.slidingVertical span{
+				animation: topToBottom 12.5s linear infinite 0s;
+				-ms-animation: topToBottom 12.5s linear infinite 0s;
+				-webkit-animation: topToBottom 12.5s linear infinite 0s;
+				opacity: 0;
+				overflow: hidden;
+				position: absolute;
+			}
+
+			.slidingVertical span:nth-child(2){
+				animation-delay: 2.5s;
+				-ms-animation-delay: 2.5s;
+				-webkit-animation-delay: 2.5s;
+			}
+
+			.slidingVertical span:nth-child(3){
+				animation-delay: 5s;
+				-ms-animation-delay: 5s;
+				-webkit-animation-delay: 5s;
+			}
+
+			.slidingVertical span:nth-child(4){
+				animation-delay: 7.5s;
+				-ms-animation-delay: 7.5s;
+				-webkit-animation-delay: 7.5s;
+			}
+
+			.slidingVertical span:nth-child(5){
+				animation-delay: 10s;
+				-ms-animation-delay: 10s;
+				-webkit-animation-delay: 10s;
+			}
+
+			/*topToBottom Animation*/
+			@-moz-keyframes topToBottom{
+				0% { opacity: 0; }
+				5% { opacity: 0; -moz-transform: translateY(-50px); }
+				10% { opacity: 1; -moz-transform: translateY(0px); }
+				25% { opacity: 1; -moz-transform: translateY(0px); }
+				30% { opacity: 0; -moz-transform: translateY(50px); }
+				80% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+
+			@-webkit-keyframes topToBottom{
+				0% { opacity: 0; }
+				5% { opacity: 0; -webkit-transform: translateY(-50px); }
+				10% { opacity: 1; -webkit-transform: translateY(0px); }
+				25% { opacity: 1; -webkit-transform: translateY(0px); }
+				30% { opacity: 0; -webkit-transform: translateY(50px); }
+				80% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+
+			@-ms-keyframes topToBottom{
+				0% { opacity: 0; }
+				5% { opacity: 0; -ms-transform: translateY(-50px); }
+				10% { opacity: 1; -ms-transform: translateY(0px); }
+				25% { opacity: 1; -ms-transform: translateY(0px); }
+				30% { opacity: 0; -ms-transform: translateY(50px); }
+				80% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+		}
+	}
+
 	.hero-intro {
 		position: relative;
 		height: @hero-intro-height-sm;
@@ -26,7 +245,7 @@
 			display: block;
 			height: @hero-intro-height-sm;
 			// width: 100vh;
-			
+
 			// Scrolling effect
 			&.position-fixed {
 				position: fixed;
@@ -148,7 +367,7 @@
 .hero-button-title {
 	// .transition( all 200ms linear );
 	// .translateY(-200%);
-	margin: 0 auto;	
+	margin: 0 auto;
 	color: white;
 	text-align: center;
 	width: 100%;
@@ -172,7 +391,7 @@
 	// -webkit-animation: fade-in 2s infinite; /* Safari 4+ */
 	// -moz-animation:    fade-in 2s infinite; /* Fx 5+ */
         //-o-animation:      fade-in 2s infinite; /* Opera 12+ */
-	//animation:         fade-in 2s infinite;  IE 10+, Fx 29+ 
+	//animation:         fade-in 2s infinite;  IE 10+, Fx 29+
 }
 
 // @-webkit-keyframes fade-in {
@@ -290,6 +509,3 @@
 		margin: 0.25em 0;
 	}
 }
-
-
-

@@ -5,6 +5,9 @@
 .*.sw?
 *~
 
+# FTP stuff
+.ftp*
+
 # Vagrant stuff
 acceptance_config.yml
 boxes/*

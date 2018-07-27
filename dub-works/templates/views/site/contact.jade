@@ -1,10 +1,14 @@
 extends ../../layouts/default
 
 block intro
-	.container-sm
-		.page-intro
-			h1.page-title Contact Us
-			p.lead We'd love to hear from you! 
+		article#hero.hero-meetup.hero-meetup--next
+			section.hero-intro-sm.hero-intro--hasmask
+				.hero-background
+
+		.container-sm.pt-2
+			.page-intro
+				h1.page-title Contact Us
+				p.lead We'd love to hear from you!
 
 block content
 	.page-content: .container
@@ -29,7 +33,7 @@ block content
 							.col-sm-10
 								input(type='text' name='phone' value=formData.phone placeholder='(optional)').form-control
 						.form-group(class=validationErrors.enquiryType ? 'has-error' : null required)
-							label.col-sm-2.control-label Regarding
+							label.col-sm-2.control-label Subject
 							.col-sm-10
 								select(name='enquiryType').form-control
 									option(value='') (required)
@@ -41,6 +45,6 @@ block content
 								textarea(name='message' placeholder='Leave us a message...' rows=4 required).form-control= formData.message
 						.form-group
 							.col-sm-10.col-sm-offset-2
-								p.help-block Note: others can see your enquiry in the <a href='/keystone/enquiries'>Admin UI</a>
-								button(type='submit').btn.btn-primary Submit
-
+								// p.help-block Note: others can see your enquiry in the <a href='/keystone/enquiries'>Admin UI</a>
+								center
+									button(type='submit').btn.btn-primary Submit
