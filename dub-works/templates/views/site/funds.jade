@@ -7,6 +7,81 @@ block intro
 			p.lead Alumni-sponsored seed fund for student startups
 
 block content
+	.page-content: .section.highlight: .container
+		h2.text-center Process
+
+		#timeline
+			// START LINE 2 - 10% of total width
+			.timeline-line-container(style='width:20%;')
+				.timeline-line
+					// start image icon 1 with tooltip
+					.timeline-icon
+						a(href='#date1')
+							.timeline-tooltip
+								.timeline-dot
+								.timeline-tooltip-text mentor intros, expert advice, workshops, and startup support from the GW Innovation Center
+					// end image icon 1
+					span Apply
+			// END LINE 2
+			// START LINE 2 - 10% of total width
+			.timeline-line-container(style='width:20%;')
+				.timeline-line
+					// start image icon 1 with tooltip
+					.timeline-icon
+						a(href='#date1')
+							.timeline-tooltip
+								.timeline-dot
+								.timeline-tooltip-text $100-300 prototype and team development (12 weeks)
+					// end image icon 1
+					span Stage I
+			// END LINE 2
+			// START LINE 2 - 10% of total width
+			.timeline-line-container(style='width:20%;')
+				.timeline-line
+					// start image icon 1 with tooltip
+					.timeline-icon
+						a(href='#date1')
+							.timeline-tooltip
+								.timeline-dot
+								.timeline-tooltip-text $300-500 validation - customer, innovation, impact, market discovery (12 weeks)
+					// end image icon 1
+					span Stage II
+			// END LINE 2
+			// START LINE 2 - 10% of total width
+			.timeline-line-container(style='width:20%;')
+				.timeline-line
+					// start image icon 1 with tooltip
+					.timeline-icon
+						a(href='#date1')
+							.timeline-tooltip
+								.timeline-dot
+								.timeline-tooltip-text $1,000 rapid prototyping & redesign (up to a year)
+					// end image icon 1
+					span Stage III
+			// END LINE 2
+			// START LINE 2 - 10% of total width
+			.timeline-line-container(style='width:20%;')
+				.timeline-line
+					// start image icon 1 with tooltip
+					.timeline-icon
+						a(href='#date1')
+							.timeline-tooltip
+								.timeline-dot
+								.timeline-tooltip-text variable follow up investment from the fund and/or introduction to investors
+					// end image icon 1
+					span Stage IV
+			// END LINE 2
+
+		br
+		br
+		p.text-center Hover over or tap each dot to find out more!
+
+	.page-content: .section.container
+		row: .col-sm-4.col-sm-offset-4
+			a(href='https://docs.google.com/forms/d/e/1FAIpQLSeJU3Wzd5XafueenjPmuC54dRmb8VK7e8z9_1Dx0lp09PXF6g/viewform?ts=5a79f+087', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+				span.text-caps Request Funding
+
+//-
 	.page-content: .container
 		if enquirySubmitted
 			.jumbotron.text-center

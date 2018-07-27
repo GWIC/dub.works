@@ -76,6 +76,7 @@ keystone.set('locals', {
 	// })()
 });
 
+// Admin UI navigation items
 keystone.set('nav', {
 	'meetups': ['meetups', 'talks', 'rsvps'],
 	'members': ['users', 'organisations'],
