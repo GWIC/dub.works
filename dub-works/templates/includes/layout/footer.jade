@@ -12,24 +12,18 @@ footer.site-footer.site-footer--sticky: .container
 		.col-sm-8
 			.row
 				.col-xs-4
-					h5.footer-heading Resources
-					ul
-						li: a(href='/organisations') Organisations
-						li: a(href='https://github.com/GWIC') GitHub
-						//- li: a(href='/showbag') Merchandise
-				.col-xs-4
 					h5.footer-heading Partners
 					ul: each sponsor in sponsors
-						li 
-							a(href= sponsor.website, rel='external')= sponsor.name 
+						li
+							a(href= sponsor.website, rel='external')= sponsor.name
 							i
 				.col-xs-4
 					h5.footer-heading Social media
 					ul
-							li: a(href='https://facebook.com/gwinnovationcenter/') Facebook
-							li: a(href='https://twitter.com/gwinnocenter') Twitter
-							
-							li: a(href='https://dubworks.slack.com/messages/C37TY8K5K/') Slack
+							li: a(href='https://facebook.com/gwinnovationcenter/').facebook
+							li: a(href='https://twitter.com/gwinnocenter').twitter
+							li: a(href='https://github.com/GWIC').github
+							li: a(href='https://dubworks.slack.com/messages/C37TY8K5K/').slack
 	.row.footer-copyright
 		p Copyright &copy; 2018 dub.works. Powered by <a href='http://keystonejs.com' rel='external'>KeystoneJS</a>.
 		p Template <a href="https://github.com/JedWatson/sydjs-site" rel='external'>sydjs-site</a>.

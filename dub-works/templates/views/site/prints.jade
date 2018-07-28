@@ -10,12 +10,12 @@ block intro
 		.row: .col-sm-4.col-sm-offset-4
 			a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
 				span.text-caps Request a Print
-		
+
 		h2.page-title Print Cam
-		
+
 		video#video(width="360", controls='')
 		video#video1(width="360", controls='')
-		video#video2(width="360", controls='')		
+		video#video2(width="360", controls='')
 
 block js
 	// twitter
@@ -28,7 +28,7 @@ block js
 		var video = document.getElementById('video');
 		var video1 = document.getElementById('video1');
 		var video2 = document.getElementById('video2');
-		
+
 		if(Hls.isSupported()) {
 			// Video
 			var hls = new Hls();
@@ -37,7 +37,7 @@ block js
 			hls.on(Hls.Events.MANIFEST_PARSED,function() {
 				video.play();
 			});
-	
+
 			// Video 1
 			var hls1 = new Hls();
 			hls1.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream1.m3u8');
