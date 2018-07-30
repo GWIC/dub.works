@@ -3,19 +3,30 @@ extends ../../layouts/default
 include ../../mixins/organiser
 
 block intro
-	.page-intro: .container
-		h1.page-title dub.prints
-		p.lead dub.works owns and operates three Prusa i3 MK2S printers.
+	article#hero.hero-meetup.hero-meetup--next
+		section.hero-intro-sm.hero-intro--hasmask
+			.hero-background
 
-		.row: .col-sm-4.col-sm-offset-4
-			a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
-				span.text-caps Request a Print
+	.container-sm.pt-2
+		.page-intro
+			h1.page-title dub.prints
+			p.lead dub.works owns and operates three Prusa i3 MK2S printers.
 
-		h2.page-title Print Cam
+block content
+	.page-content
+		canvas#canvas
+		
+		article.section.section--featured.home-about: .container
+			.row: .col-sm-4.col-sm-offset-4
+				a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+					span.text-caps Request a Print
 
-		video#video(width="360", controls='')
-		video#video1(width="360", controls='')
-		video#video2(width="360", controls='')
+		.section.home-about: .container
+			h2.page-title Print Cam
+
+			video#video(width="360", controls='')
+			video#video1(width="360", controls='')
+			video#video2(width="360", controls='')
 
 block js
 	// twitter
@@ -23,6 +34,8 @@ block js
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
 	script(src='https://cdn.jsdelivr.net/npm/hls.js@latest')
+	
+	script(src='js/common/imageNode.js')
 
 	script.
 		var video = document.getElementById('video');
