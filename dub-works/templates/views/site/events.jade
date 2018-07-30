@@ -5,13 +5,11 @@ block intro
 	.container-sm
 		.page-intro
 			h1.page-title dub.hosts
-			p.lead Coming up on campus. We hope to see you at
+			p.lead Coming up on campus. We hope to see you at 
 				if !user
 					a(href='/join').js-auth-trigger our&nbsp;next&nbsp;event
 				else
 					| our next event
-				| . Stay in the loop - 
-				a(href='http://twitter.com/gwinnocenter', target='_blank') follow us on twitter
 
 		if upcomingMeetup
 			+meetup(upcomingMeetup)
