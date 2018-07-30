@@ -3,9 +3,14 @@ extends ../../layouts/default
 include ../../mixins/organiser
 
 block intro
-	.page-intro: .container
-		h1.page-title dub.creates
-		p.lead Coming soon...
+	article#hero.hero-meetup.hero-meetup--next
+		section.hero-intro-sm.hero-intro--hasmask
+			.hero-background
+
+	.container-sm.pt-2
+		.page-intro
+			h1.page-title dub.creates
+			p.lead Coming soon...
 
 block js
 	// twitter
