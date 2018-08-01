@@ -6,14 +6,14 @@
 **/
 
 // General styles
-@hero-intro-height-sm: 100vh;
-@hero-intro-height-xs: 100vh; // was 420px
+@hero-intro-height-sm: 75vh;
+@hero-intro-height-xs: 50vh; // was 420px
 #hero {
 	position: relative;
 
 	.hero-intro-sm {
 		position: relative;
-		height: 50vh;
+		height: @hero-intro-height-xs;
 		color: white;
 		text-align: center;
 		margin-top: -(@navbar-height)*2;
@@ -25,7 +25,7 @@
 			left: 0;
 			background-size: cover;
 			display: block;
-			height: 50vh;
+			height: @hero-intro-height-xs;
 			// width: 100vh;
 
 			// Scrolling effect
