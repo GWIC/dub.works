@@ -29,11 +29,12 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 
 				
 				ul.navbar-nav.navbar-nav--right
-						li: a(href='/Join', data-from=page.path).js-auth-trigger Join GWIC
+						//-li: a(href='/Join', data-from=page.path).js-auth-trigger Join GWIC
 						li: a(href='https://facebook.com/gwinnovationcenter/').facebook
 						li: a(href='https://twitter.com/gwinnocenter').twitter
+						li: a(href= 'https://www.instagram.com/gwinnovationcenter/').instagram
 						li: a(href='https://github.com/GWIC').github
-						li: a(href='https://dubworks.slack.com/messages/C37TY8K5K/').slack
+
 //-if user
 //-						li: a(href='/me').user
 //-								img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle

@@ -43,7 +43,7 @@
 .timeline-path {
 	bottom: 0;
 	left: 50%;
-	background-color: rgba(0,0,0,0.1);
+	background-color: @gray-dark;
 	margin-left: -(@timeline-path / 2);
 	position: absolute;
 	top: 0;
@@ -52,7 +52,7 @@
 	&:before,
 	&:after {
 		.square( @timeline-alphaomega );
-		background-color: rgba(0,0,0,0.1);
+		background-color: @gray-dark;
 		border-radius: 50%;
 		content: "";
 		left: 50%;
@@ -73,7 +73,7 @@
 
 .timeline-item-node {
 	.size(10%,1px);
-	background-color: rgba(0,0,0,0.1);
+	background-color: @gray-dark;
 	position: absolute;
 	top: 25px;
 
@@ -81,7 +81,7 @@
 		.box-shadow( 0 0 0 4px @body-bg );
 		.square( @timeline-node );
 		background-color: @body-bg;
-		border: 1px solid rgba(0,0,0,0.2);
+		border: 1px solid @gray-dark;
 		border-radius: 50%;
 		content: "";
 		margin-top: -(@timeline-node / 2);
@@ -240,7 +240,7 @@ align-items:center;}
     text-align: center;
     border-radius: 6px;
     padding: 10px 10px;
-    
+
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
