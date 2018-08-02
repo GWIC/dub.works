@@ -5,7 +5,7 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 		.navbar-header
 			a(href='/', title='Back to Home').site-branding
 				//- include /public/images/logo.svg
-				img(src='/images/dubworks_logo.png', alt='dub.works logo', id = '', height=46)
+				img(src='/images/inno.png', alt='dub.works logo', id = '', height=46)
 			//- User avatar
 			if user
 				a(href='/me').user.hidden-md.hidden-lg
@@ -18,7 +18,16 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 			nav(role='navigation')
 				ul.navbar-nav.navbar-nav--left
 					each link in navLinks
-						li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
+						if typeof(link.pages) !== 'undefined'
+							li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
+								//-
+									each sublink in link.pages
+										li(class=(section == sublink.key ? 'nav-item-' + sublink.key + ' active' : 'nav-item-' + sublink.key)): a(href=sublink.href)= sublink.label
+						else
+							li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
+				
+
+				
 				ul.navbar-nav.navbar-nav--right
 						li: a(href='/Join', data-from=page.path).js-auth-trigger Join GWIC
 						li: a(href='https://facebook.com/gwinnovationcenter/').facebook

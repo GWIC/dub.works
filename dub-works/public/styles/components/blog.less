@@ -6,7 +6,7 @@
 	.clearfix();
 	margin-bottom: 40px;
 	text-align: center;
-	
+
 }
 .blog-post__image {
 	margin-bottom: 20px;
@@ -16,7 +16,7 @@
 }
 .blog-post__heading {
 	margin-top: 0;
-	
+
 	a {
 		color: @headings-color;
 	}
@@ -24,7 +24,7 @@
 .blog-post__author {
 	color: mix(@body-bg, @text-color, 50%);
 	font-weight: 200;
-	
+
 	a {
 		color: mix(@body-bg, @text-color, 50%);
 	}
@@ -65,7 +65,7 @@
 	a {
 		color: @gray-darker;
 	}
-	
+
 	.post-summary {
 		padding: @page-padding / 2;
 		.post-byline {
@@ -82,6 +82,7 @@
 		.post-title {}
 		.post-content-brief {
 			font-size: @font-size-base * 1.1;
+			color: @gray-darker;
 		}
 	}
 
@@ -103,11 +104,11 @@
 	height: 30px;
 	.clearfix();
 	position: relative;
-	
+
 	@media (min-width: @screen-sm-min) {
 		&.right {
 			float: right;
-		
+
 			.share-button {
 				margin-right: 0;
 				margin-left: 10px;

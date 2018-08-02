@@ -4,7 +4,8 @@
 	line-height: @navbar-height + 7;
 	background-color: @navbar-default-bg;
 	height: @navbar-height + 10;
-	.floor;
+	width: 100%;
+	position: fixed;
 	.ceiling;
 }
 
@@ -136,7 +137,7 @@ nav {
 			width: 24px;
 			height: 2px;
 			border-radius: 2px;
-			background: fade( black, 50% );
+			background: fade( white, 50% );
 
 			&:before, &:after {
 				.transition(all 0.2s ease);
@@ -146,7 +147,7 @@ nav {
 				width: 24px;
 				height: 2px;
 				border-radius: 2px;
-				background: fade( black, 50% );
+				background: fade( white, 50% );
 				content: '';
 			}
 
@@ -156,7 +157,7 @@ nav {
 
 		&.open {
 			.patty {
-				background: none;
+				background: black;
 				&:before { .rotate(-45deg); top: 0; background: @gray-dark; }
 				&:after { .rotate(45deg); top: 0; background: @gray-dark; }
 			}
