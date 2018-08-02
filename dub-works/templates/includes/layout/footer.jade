@@ -1,29 +1,15 @@
 //- SITE FOOTER
 footer.site-footer.site-footer--sticky: .container
-	.row
-		.col-sm-4
-			h5.footer-heading Address
-			p 725 23rd St NW, Washington, DC 20052
-			p Mezzanine Floor
-			ul.list-inline
-				//- li: a(href='/about') More about dub.works
-				li: a(href='mailto:contact@dub.works') Contact us
-
-		.col-sm-8
-			.row
-				.col-xs-4
-					h5.footer-heading Partners
-					ul: each sponsor in sponsors
-						li
-							a(href= sponsor.website, rel='external')= sponsor.name
-							i
-				.col-xs-4
-					h5.footer-heading Social media
-					ul
-							li: a(href='https://facebook.com/gwinnovationcenter/').facebook
-							li: a(href='https://twitter.com/gwinnocenter').twitter
-							li: a(href='https://github.com/GWIC').github
-							li: a(href='https://dubworks.slack.com/messages/C37TY8K5K/').slack
 	.row.footer-copyright
-		p Copyright &copy; 2018 dub.works. Powered by <a href='http://keystonejs.com' rel='external'>KeystoneJS</a>.
-		p Template <a href="https://github.com/JedWatson/sydjs-site" rel='external'>sydjs-site</a>.
+		h5.footer-heading Address
+		p 725 23rd St NW, Washington, DC 20052
+		p Mezzanine Floor
+		ul.list-inline
+			//- li: a(href='/about') More about dub.works
+			li: a(href='mailto:contact@dub.works') Contact us
+		
+		br
+		
+		p Copyright &copy; 2018 dub.works.
+		//Powered by <a href='http://keystonejs.com' rel='external'>KeystoneJS</a>.
+		//p Template <a href="https://github.com/JedWatson/sydjs-site" rel='external'>sydjs-site</a>.

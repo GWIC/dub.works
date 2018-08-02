@@ -93,9 +93,16 @@ exports = module.exports = function (app) {
 	app.get('/about', routes.views.about);
 	app.get('/mentoring', routes.views.mentoring);
 	app.get('/creates', routes.views.creates);
-	app.get('/prints', routes.views.prints);
 	app.all('/contact', routes.views.contact);
 	app.all('/funds', routes.views.funds);
+	app.all('/printing', routes.views.printing);
+	app.all('/virtualtour', routes.views.virtualtour);
+	app.all('/upcomingevents', routes.views.upcomingevents);
+	app.all('/requestspace', routes.views.requestspace);
+	app.all('/pastevents', routes.views.pastevents);
+	app.all('/whatwedo', routes.views.whatwedo);
+	app.all('/ourhistory', routes.views.ourhistory);
+	app.all('/ourteam', routes.views.ourteam);
 
 	// Session
 	app.all('/join', routes.views.session.join);

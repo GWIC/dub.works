@@ -13,8 +13,15 @@ block intro
 		section.hero-intro.hero-intro--hasmask
 			.hero-background.position-relative#hero-fade
 			.hero-intro-content
-				h1.title GWIC
-				h2.subtitle
+				img(src="images/Innovating.png" style="width: 80vw")
+			//-
+				.row.hv-centered
+					.col-md-4.col-md-offset-2
+						h1.title-main GWIC | 
+					.col-md-4
+						p.lead Powering Interdisciplinary Minds to Create Social Change
+				//-
+					h2.subtitle
 					a(href="#what-we-do").double-down-arrow
 					
 		#projectFacts.sectionClass
@@ -45,7 +52,7 @@ block intro
 block content
 	.page-content#what-we-do
 		//- About
-		article.section.section--featured.home-about: .container
+		article.section: .container
 			h1.text-center What We Do
 			.row
 				.col-md-4.col-md-offset-1
@@ -67,11 +74,12 @@ block content
 				.col-md-4.col-md-offset-1
 					p.lead The focal point of the Dub Works is to facilitate knowledge transfer and acquisition of hands- on skills, new domain exploration, interaction with peers from other disciplines, alumni, and like-minded people. The Dub Works aids discussions around disruptive ideas, exposure to art and affords real-world opportunities for GW students aspiring to create value for others.
 
-			if !user
-				.row: .col-sm-4.col-sm-offset-4
-					a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-lg.btn-block.btn-primary.mv-1
-						span.text-caps Join dub.works now
-			p.mt-1
+			//-
+				if !user
+					.row: .col-sm-4.col-sm-offset-4
+						a(href='/join', data-from=page.path).js-auth-trigger.btn.btn-lg.btn-block.btn-primary.mv-1
+							span.text-caps Join dub.works now
+				p.mt-1
 
 //- JS
 block js

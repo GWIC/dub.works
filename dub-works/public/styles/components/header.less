@@ -2,43 +2,17 @@
 // ------------------------------
 #header {
 	line-height: @navbar-height + 7;
-	background-color: white;
+	background-color: @navbar-default-bg;
 	height: @navbar-height + 10;
 	.floor;
 	.ceiling;
 }
 
-// Header on home page
-#header.header--home {
-	background-color: white;
-}
-
-/*
-// Navbar on home page
-#header.header--home {
-	&.headroom--top .navbar {
-		background-color: transparent;
-	}
-	&.headroom--not-top.slideDown .navbar,
-	&.headroom--not-top.headroom--middle.slideUp .navbar {
-		
-	}
-}
-
-// Navbar on other page
-#header.header--page {
-	.navbar {
-		background-color: transparent;
-	}
-}
- */
-
-
 // General styles
 .navbar {
 	.clearfix();
 	margin: 0;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .navbar-header {
@@ -54,7 +28,7 @@
 .site-branding {
 	display: block;
 	width: 120px;
-	
+
 	> svg {
 		width: 100%;
 		height: @navbar-height + 10;
@@ -85,7 +59,7 @@ nav {
 		padding-right: 15px;
 		padding-left: 15px;
 		outline: none;
-		color: fade(black, 80%);
+		color: fade(white, 80%);
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: @font-size-base * 1.1;
