@@ -13,9 +13,6 @@
     min-height: @btn-hero-size;
 }
 
-
-
-
 //
 // Timeline
 // ==============================
@@ -23,7 +20,6 @@
 .page-about .iy-body {
 	padding-bottom: 0;
 }
-
 
 // Common
 // ------------------------------
@@ -99,6 +95,10 @@
 	display: block;
 	padding: 1em;
 
+  h4 {
+    color: @gray;
+  }
+
 	&:hover,
 	&:focus {
 		background-color: fade(@white, 50%);
@@ -109,6 +109,10 @@
 		h3 {
 			text-decoration: underline;
 		}
+
+    h4 {
+      color: inherit;
+    }
 	}
 }
 
@@ -188,7 +192,6 @@ display:flex;
 flex-direction:row;
 flex-wrap:nowrap;
 width:75%;
-height:45px;
 margin:auto;
 }
 

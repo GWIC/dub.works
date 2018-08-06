@@ -2,35 +2,70 @@ extends ../../layouts/default
 include ../../mixins/meetup
 
 block intro
-	.container-sm
-		.page-intro
-			h1.page-title dub.hosts
-			p.lead Coming up on campus. We hope to see you at 
-				if !user
-					a(href='/join').js-auth-trigger our&nbsp;next&nbsp;event
-				else
-					| our next event
+	.container
+		#carousel-example-generic.carousel(style='margin-top:-72px;').slide(data-ride='carousel')
+			ol.carousel-indicators
+				li.active(data-target='#carousel-example-generic', data-slide-to='0')
+				li(data-target='#carousel-example-generic', data-slide-to='1')
+				li(data-target='#carousel-example-generic', data-slide-to='2')
+				li(data-target='#carousel-example-generic', data-slide-to='3')
+			.carousel-inner(role='listbox', style='height:40vh')
+				.item.active
+					img(src='/images/placeholders/sydney-1.jpg')
+				.item
+					img(src='/images/placeholders/sydney-2.jpg')
+				.item
+					img(src='/images/placeholders/sydney-4.jpg')
+				.item
+					img(src='/images/placeholders/sydney-3.jpg')
 
-		if upcomingMeetup
-			+meetup(upcomingMeetup)
 block content
-	.page-content: .container
-		.timeline
-			.timeline-path
-			.timeline-item--offset
-			each meetup, i in pastMeetups
-				.timeline-item(class=i % 2 == 1 ? 'timeline-item--even' : 'timeline-item--odd')
-					.timeline-item-node
-					a(href=meetup.url).timeline-item-inner
-						h6.text-caps.text-danger= meetup._.startDate.format('YYYY - MMMM ')
-						h4= meetup.name
-						!=utils.cropString( utils.htmlToText(meetup.description), 240, '...', true )
-						//- !=utils.htmlToText(meetup.description)
+		.section#timeline: .container
+			h2.text-center.pb-1 Past Events
+			
+			.timeline
+				.timeline-path
+				.timeline-item--offset
+				each meetup, i in pastMeetups
+					.timeline-item(class=i % 2 == 1 ? 'timeline-item--even' : 'timeline-item--odd')
+						.timeline-item-node
+						a(href=meetup.url).timeline-item-inner
+							h6.text-caps.text-danger= meetup._.startDate.format('MMMM - DD - YYYY')
+							h4= meetup.name
+							!=utils.cropString( utils.htmlToText(meetup.description), 240, '...', true )
+							//- !=utils.htmlToText(meetup.description)
+							
+			if !upcomingMeetup && !pastMeetups.length
+				h3.text-muted There are no events yet...
+		
+		.section#reserve: .container
+			h2.text-center Reserve Our Space
+			
+			.row
+				.col-sm-4.col-sm-offset-2
+					a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Main Space
+				
+				.col-sm-4
+					a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Kitchen
+							
+			.row
+				.col-sm-4.col-sm-offset-2
+					a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Mentor Cafe
 
-		if !upcomingMeetup && !pastMeetups.length
-			h3.text-muted There are no events yet.
+				.col-sm-4
+					a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Unconference Room
 
-//- block js
+		.section#calendar: .container
+			
+
+block js
+	script(src='/js/lib/bootstrap/carousel.js')
+	
+//-
 	// twitter
 	script.
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

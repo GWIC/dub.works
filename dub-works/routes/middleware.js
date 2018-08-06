@@ -12,13 +12,13 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 
 	locals.navLinks = [
-		//{ label: 'Home',	key: 'home',		href: '/' },
+		{ label: 'Home',	key: 'home',		href: '/' },
 		{ label: 'about',	key: 'about',		pages: [
 			{ label: 'what we do',      subkey: 'whatwedo',     href: '/whatwedo' },
 			{ label: 'our history',     subkey: 'ourhistory',     href: '/ourhistory' },
 			{ label: 'our team',       subkey: 'ourteam',      href: 'ourteam' }
 		] },
-		{ label: 'events',	key: 'events',		pages: [
+			{ label: 'events',	key: 'events',		pages: [
 			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/upcomingevents' },
 			{ label: 'request space',     subkey: 'requestspace',     href: '/requestspace' },
 			{ label: 'past events',       subkey: 'pastevents',      href: '/pastevents' }
