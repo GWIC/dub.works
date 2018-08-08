@@ -23,7 +23,7 @@ exports.initLocals = function(req, res, next) {
 			{ label: 'request space',     subkey: 'requestspace',     href: '/events' },
 			{ label: 'past events',       subkey: 'pastevents',      href: '/events' }
 		] },
-		{ label: 'projects',	key: 'creates', 	href:'creates' },
+		{ label: 'projects',	key: 'projects', 	href:'projects' },
 		//{ label: 'Members',	key: 'members',		href: '/members' },
 		//{ label: 'printing',	key: 'prints',		href: '/prints' },
 		{ label: 'funding',	key: 'funds',		href: '/funds' },
