@@ -3,7 +3,7 @@ include ../../mixins/meetup
 
 block intro
 	.container
-		#carousel-example-generic.carousel(style='margin-top:-72px;').slide(data-ride='carousel')
+		#carousel-example-generic.carousel(style='margin-top:-72px; height:40vh;').slide(data-ride='carousel')
 			ol.carousel-indicators
 				li.active(data-target='#carousel-example-generic', data-slide-to='0')
 				li(data-target='#carousel-example-generic', data-slide-to='1')
@@ -11,15 +11,24 @@ block intro
 				li(data-target='#carousel-example-generic', data-slide-to='3')
 			.carousel-inner(role='listbox', style='height:40vh')
 				.item.active
-					img(src='/images/placeholders/sydney-1.jpg')
+					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
 				.item
-					img(src='/images/placeholders/sydney-2.jpg')
+					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
 				.item
-					img(src='/images/placeholders/sydney-4.jpg')
+					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
 				.item
-					img(src='/images/placeholders/sydney-3.jpg')
+					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
 
 block content
+	.page-content
+		.section#next-event: .container
+			h2.text-center Our Next Event
+			
+			if upcomingMeetup
+				+meetup(upcomingMeetup)
+			else
+				p.text-center No upcoming events planned...
+
 		.section#timeline: .container
 			h2.text-center.pb-1 Past Events
 			
@@ -37,7 +46,7 @@ block content
 							
 			if !upcomingMeetup && !pastMeetups.length
 				h3.text-muted There are no events yet...
-		
+
 		.section#reserve: .container
 			h2.text-center Reserve Our Space
 			

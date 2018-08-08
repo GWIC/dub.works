@@ -14,22 +14,22 @@ exports.initLocals = function(req, res, next) {
 	locals.navLinks = [
 		{ label: 'Home',	key: 'home',		href: '/' },
 		{ label: 'about',	key: 'about',		pages: [
-			{ label: 'what we do',      subkey: 'whatwedo',     href: '/whatwedo' },
-			{ label: 'our history',     subkey: 'ourhistory',     href: '/ourhistory' },
-			{ label: 'our team',       subkey: 'ourteam',      href: 'ourteam' }
+			{ label: 'what we do',      subkey: 'whatwedo',     href: '/about' },
+			{ label: 'our history',     subkey: 'ourhistory',     href: '/about' },
+			{ label: 'our team',       subkey: 'ourteam',      href: 'about' }
 		] },
 			{ label: 'events',	key: 'events',		pages: [
-			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/upcomingevents' },
-			{ label: 'request space',     subkey: 'requestspace',     href: '/requestspace' },
-			{ label: 'past events',       subkey: 'pastevents',      href: '/pastevents' }
+			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/events' },
+			{ label: 'request space',     subkey: 'requestspace',     href: '/events' },
+			{ label: 'past events',       subkey: 'pastevents',      href: '/events' }
 		] },
 		{ label: 'projects',	key: 'creates', 	href:'creates' },
 		//{ label: 'Members',	key: 'members',		href: '/members' },
 		//{ label: 'printing',	key: 'prints',		href: '/prints' },
 		{ label: 'funding',	key: 'funds',		href: '/funds' },
 		{ label: 'dub.works',	key: 'dub.works',		pages: [
-			{ label: 'virtual tour',      subkey: 'virtual tour',     href: '/virtualtour' },
-			{ label: '3D printing',     subkey: 'printing',     href: '/printing' }
+			{ label: 'virtual tour',      subkey: 'virtual tour',     href: '/dubworks' },
+			{ label: '3D printing',     subkey: 'printing',     href: '/dubworks' }
 		] },
 		{ label: 'blogs',	key: 'blog',		href: '/blog' },
 		{ label: 'contact',	key: 'contact',		href: '/contact' }

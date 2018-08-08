@@ -12,7 +12,7 @@ exports = module.exports = function(req, res) {
 
 	locals.section = 'home';
 	locals.meetup = {};
-	locals.page.title = 'Welcome to dub.works';
+	locals.page.title = 'Welcome to GWIC';
 
 	locals.rsvpStatus = {};
 
@@ -96,9 +96,9 @@ exports = module.exports = function(req, res) {
 		} else {
 			next();
 		}
-		
+
 	});
-	
+
 	view.render('site/index');
-	
+
 }
