@@ -20,9 +20,8 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 					each link in navLinks
 						if typeof(link.pages) !== 'undefined'
 							li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
-							
 								each sublink in link.pages
-									li(class=(section == sublink.key ? 'nav-item-' + sublink.key + ' active' : 'nav-item-' + sublink.key)): a(href=sublink.href)= sublink.label
+									li(class=(section == sublink.key ? 'dropdown' + sublink.key + ' active' : 'dropdown' + sublink.key)): a(href=sublink.href)= sublink.label
 						else
 							li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
 

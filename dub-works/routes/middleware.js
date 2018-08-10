@@ -16,14 +16,14 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'about',	key: 'about',		pages: [
 			{ label: 'what we do',      subkey: 'whatwedo',     href: '/about' },
 			{ label: 'our history',     subkey: 'ourhistory',     href: '/about' },
-			{ label: 'our team',       subkey: 'ourteam',      href: 'about' }
+			{ label: 'our team',       subkey: 'ourteam',      href: '/about' }
 		] },
 			{ label: 'events',	key: 'events',		pages: [
 			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/events' },
 			{ label: 'request space',     subkey: 'requestspace',     href: '/events' },
 			{ label: 'past events',       subkey: 'pastevents',      href: '/events' }
 		] },
-		{ label: 'projects',	key: 'projects', 	href:'projects' },
+		{ label: 'projects',	key: 'creates', 	href:'creates' },
 		//{ label: 'Members',	key: 'members',		href: '/members' },
 		//{ label: 'printing',	key: 'prints',		href: '/prints' },
 		{ label: 'funding',	key: 'funds',		href: '/funds' },
