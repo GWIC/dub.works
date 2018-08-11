@@ -8,58 +8,7 @@
 	position: fixed;
 	.ceiling;
 }
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 // General styles
 .navbar {
 	.clearfix();
@@ -101,10 +50,16 @@ nav {
 	padding-left: 0;
 	list-style: none;
 
-	> li {
+	li {
 		display: inline-block;
+
+		.active > a {
+			background: transparent;
+			color: #ffb347;
+		}
 	}
-	> li > a {
+
+	a {
 		.transition( all 0.5s ease );
 		display: block;
 		padding-top: 3px;
@@ -126,17 +81,35 @@ nav {
 			text-decoration: none;
 		}
 	}
-	> li.active > a {
-		background: transparent;
-		color: #ffb347;
-	}
-	> li > a.user {
+
+	a.user {
 		text-transform: none;
 		img {
 			margin-right: 5px;
 		}
 	}
+
+	/* The dropdown container */
+	.dropdown {
+	  float: left;
+	  overflow: visible;
+
+		/* Show the dropdown menu on hover */
+		&:hover .dropdown-content {
+		  display: block;
+		}
+
+		/* Dropdown content (hidden by default) */
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: @navbar-default-bg;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+	}
 }
+
 .navbar-text-about{
 	color: #fff;
 }
@@ -225,7 +198,7 @@ nav {
 		left: 0;
 		visibility: hidden;
 		overflow: hidden;
-		background: fade( white, 99% );
+		background: @navbar-default-bg;
 
 		nav {
 			.perspective(1200px);

@@ -1,9 +1,10 @@
 //- HEADER
 header(id='header', role='banner', class=(section == 'home' ? 'header--home' : 'header--page'))
+
 	nav.navbar(role='navigation'): .container
 		//- Site logo + site nav trigger button (on mobile)
 		.navbar-header
-			a(href='/', title='Back to Home').site-branding
+			//- a(href='/', title='Back to Home').site-branding
 				//- include /public/images/logo.svg
 				//-img(src='/images/inno.png', alt='dub.works logo', id = '', height=46)
 			//- User avatar
@@ -18,15 +19,15 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 			nav(role='navigation')
 				ul.navbar-nav.navbar-nav--left
 					each link in navLinks
-						if typeof(link.pages) !== 'undefined'
-							li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
-								each sublink in link.pages
-									li(class=(section == sublink.key ? 'dropdown' + sublink.key + ' active' : 'dropdown' + sublink.key)): a(href=sublink.href)= sublink.label
+						if typeof(link.pages) === 'undefined'
+							li: a(href=link.href)= link.label
 						else
-							li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
-
-
-
+							.dropdown: a= link.label
+								.dropdown-content
+									each sublink in link.pages
+										li: a(href=sublink.href)= sublink.label
+										//- li(class=(section == sublink.subkey ? 'nav-item-' + sublink.subkey + ' active' : 'nav-item-' + sublink.subkey)): a(href=sublink.href)= sublink.label
+				
 				ul.navbar-nav.navbar-nav--right
 						//-li: a(href='/Join', data-from=page.path).js-auth-trigger Join GWIC
 						li: a(href='https://facebook.com/gwinnovationcenter/').facebook

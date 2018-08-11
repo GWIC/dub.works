@@ -18,7 +18,7 @@ exports.initLocals = function(req, res, next) {
 			{ label: 'our history',     subkey: 'ourhistory',     href: '/about#our-history' },
 			{ label: 'our team',       subkey: 'ourteam',      href: '/about#our-team' }
 		] },
-			{ label: 'events',	key: 'events',		pages: [
+		{ label: 'events',	key: 'events',		pages: [
 			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/events' },
 			{ label: 'request space',     subkey: 'requestspace',     href: '/events' },
 			{ label: 'past events',       subkey: 'pastevents',      href: '/events' }

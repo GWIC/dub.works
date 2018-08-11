@@ -35,7 +35,7 @@
 */
 
 .tile-base() {
-	background-color: white;
+    background-color:#fff;
 	border-radius: @border-radius-small;
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 2px 0 rgba(0,0,0,0.04);
   color: black;
@@ -47,6 +47,23 @@
   h5 {
     color: black;
   }
+
+  &:hover,
+	&:focus {
+		background-color: fade(@white, 50%);
+		color: #fff;
+		outline: none;
+		text-decoration: none;
+
+		h3 {
+			text-decoration: underline;
+      color: #fff;
+		}
+
+    h2, h4, h5, p {
+      color: #fff;
+    }
+	}
 }
 
 
