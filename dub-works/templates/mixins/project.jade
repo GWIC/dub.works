@@ -1,0 +1,12 @@
+mixin project(proj)
+    .proj.row(id=proj.id)
+        .col-sm-3.col-md-2.text-center
+            if proj.project_lead.exists
+                span.proj__project_lead
+                    img(src=proj._.project_lead.limit(120,120), alt=proj.name)
+        //- Project Title
+        .col-sm-9.col-md-8
+            h2.proj__heading
+                = proj.name
+            if proj.description.html
+                != proj.description.html

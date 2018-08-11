@@ -1,0 +1,76 @@
+extends ../../layouts/default
+
+block intro
+	article#hero.hero-meetup.hero-meetup--next
+		section.hero-intro.hero-intro--hasmask
+			.hero-background-dubworks
+			.hero-intro-content
+				h1.title dub.works
+
+	//- .container-sm.pt-2
+	//- .page-intro
+	//- 	h1.page-title dub.works
+		//-p.lead dub.works owns and operates three Prusa i3 MK2S printers.
+
+block content
+	.page-content
+	//- rip in peace little 3d printer. canvas#canvas
+
+	article.section.section--featured.home-about: .container
+		.row: .col-sm-4.col-sm-offset-4
+			a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+				span.text-caps Request a Print
+
+	.section.home-about: .container
+		h2.page-title Print Cam
+
+		video#video(width="360", controls='')
+		video#video1(width="360", controls='')
+		video#video2(width="360", controls='')
+
+block js
+	script(src='https://cdn.jsdelivr.net/npm/hls.js@latest')
+
+	script(src='js/common/imageNode.js')
+
+	script.
+		var video = document.getElementById('video');
+		var video1 = document.getElementById('video1');
+		var video2 = document.getElementById('video2');
+
+		if(Hls.isSupported()) {
+			// Video
+			var hls = new Hls();
+			hls.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream.m3u8');
+			hls.attachMedia(video);
+			hls.on(Hls.Events.MANIFEST_PARSED,function() {
+				video.play();
+			});
+
+			// Video 1
+			var hls1 = new Hls();
+			hls1.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream1.m3u8');
+			hls1.attachMedia(video1);
+			hls1.on(Hls.Events.MANIFEST_PARSED,function() {
+				video1.play();
+			});
+
+			// Video 2
+			var hls2 = new Hls();
+			hls2.loadSource('http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com:1337/hls/stream2.m3u8');
+			hls2.attachMedia(video2);
+			hls2.on(Hls.Events.MANIFEST_PARSED,function() {
+				video2.play();
+			});
+		}
+
+		// hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+		// When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+		// This is using the built-in support of the plain video element, without using hls.js.
+		// Note: it would be more normal to wait on the 'canplay' event below however on Safari (where you are most likely to find built-in HLS support) the video.src URL must be on the user-driven
+		// white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
+		else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+			video.src = 'http://ec2-18-188-68-214.us-east-2.compute.amazonaws.com/hls/stream.m3u8';
+			video.addEventListener('loadedmetadata',function() {
+				video.play();
+			});
