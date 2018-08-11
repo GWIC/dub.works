@@ -84,7 +84,6 @@ exports = module.exports = function (app) {
 	app.get('/members', routes.views.members);
 	app.get('/members/mentors', routes.views.mentors);
 	app.get('/member/:member', routes.views.member);
-	app.get('/organisations', routes.views.organisations);
 	app.get('/links', routes.views.links);
 	app.get('/links/:tag?', routes.views.links);
 	app.all('/links/link/:link', routes.views.link);
@@ -92,7 +91,7 @@ exports = module.exports = function (app) {
 	app.all('/blog/post/:post', routes.views.post);
 	app.get('/about', routes.views.about);
 	app.get('/mentoring', routes.views.mentoring);
-	//app.get('/projects', routes.views.projects);
+	app.get('/projects', routes.views.projects);
 	app.all('/contact', routes.views.contact);
 	app.all('/funds', routes.views.funds);
 	app.all('/dubworks', routes.views.dubworks);

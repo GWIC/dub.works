@@ -14,16 +14,16 @@ exports.initLocals = function(req, res, next) {
 	locals.navLinks = [
 		{ label: 'Home',	key: 'home',		href: '/' },
 		{ label: 'about',	key: 'about',		pages: [
-			{ label: 'what we do',      subkey: 'whatwedo',     href: '/about' },
-			{ label: 'our history',     subkey: 'ourhistory',     href: '/about' },
-			{ label: 'our team',       subkey: 'ourteam',      href: '/about' }
+			{ label: 'what we do',      subkey: 'whatwedo',     href: '/about#what-we-do' },
+			{ label: 'our history',     subkey: 'ourhistory',     href: '/about#our-history' },
+			{ label: 'our team',       subkey: 'ourteam',      href: '/about#our-team' }
 		] },
 			{ label: 'events',	key: 'events',		pages: [
 			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/events' },
 			{ label: 'request space',     subkey: 'requestspace',     href: '/events' },
 			{ label: 'past events',       subkey: 'pastevents',      href: '/events' }
 		] },
-		{ label: 'projects',	key: 'creates', 	href:'creates' },
+		{ label: 'projects',	key: 'projects', 	href:'/projects' },
 		//{ label: 'Members',	key: 'members',		href: '/members' },
 		//{ label: 'printing',	key: 'prints',		href: '/prints' },
 		{ label: 'funding',	key: 'funds',		href: '/funds' },

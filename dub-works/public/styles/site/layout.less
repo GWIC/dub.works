@@ -366,7 +366,27 @@ body {
 	}
 }
 
+// Project models
+// -----------------------------
 
+.proj__heading {
+	margin-top: 0;
+
+	a {
+		color: @headings-color;
+	}
+}
+
+.proj__project_lead {
+	display: block;
+	margin-bottom: 20px;
+}
+
+@media (min-width: @screen-sm-min) {
+	.proj__project_lead img {
+		.img-responsive();
+	}
+}
 
 // Animation
 // ------------------------------

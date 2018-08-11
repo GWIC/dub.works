@@ -1,8 +1,6 @@
 extends ../../layouts/default
 
 include ../../mixins/organiser
-include ../../mixins/post
-include ../../mixins/meetup-talk
 include ../../mixins/organisation
 
 
@@ -13,43 +11,89 @@ block intro
 			.hero-intro-content
 				h1.title about
 //	h1.title About Us
+
 block content
 	.page-content
-		article.section: .container
-			h1 Who We Are
+		article.section#who-we-are: .container
+			h1.text-center Who We Are
 			p.lead The GW experience was and, to some, still is largely tailored for the young international entrepreneur, catering to the political scientists and communicators promising to make history.
 			p.lead The Elliott School of International Affairs has long been the poster child of the university; this is beginning to change, however, as the school as a whole move to interdisciplinary development and showcases its new-and-improved School of Engineering and Applied Sciences (SEAS). The prolific advances SEAS has made in the recent years has shifted attention away from the classical interpretation of GW purpose and has brought support, both administrative and communal, for the recently renewed GW Innovation Center (GWIC).
 			p.lead The Innovation Center, thereover, embodies the aforementioned new values of the university. Out of the GWIC has come a variety of socially innovative organizations, start-ups, and new developments. The George Washington University's Innovation Center (GWIC) is a young but continuously growing team of innovators passionate about using interdisciplinary problem solving to approach both social and practical innovation. Primarily, we use our team's skill in engineering to complement our talents in a variety of other disciplines. Pursuing projects from a mobile maker bus to 3D printed prosthetics to a virtual Jane Goodall affiliate, we look to incorporate partners and projects from a web of complementary disciplines.
 
-		article.section: .container
-			h3.text-center Meet the team behind the innovation center
-			h4.text-center Senior Fellows
-			//- .row.about-organisers.col-md-offset-1
-			//- 	each org in organisers
-			//- 		.col-sm-4
-			//- 			+organiser(org)
-			br
-			h4.text-center Faculty Sponsors
-			//- .row.about-organisers.col-md-offset-1
-			//- 	each org in organisers1
-			//- 		.col-sm-4
-			//- 			+organiser(org)
-			br
-			h4.text-center Students
-			//- .row.about-organisers.col-md-offset-1
-			//- 	each org in organisers2
-			//- 		.col-sm-4
-			//- 			+organiser(org)
+		article.section#team: .container
+			h2.text-center Meet the GWIC Team
 			
-			//- .page-content: .container
-				.organisations
-					if organisations.length
-						each org, i in organisations
-							if i
-								hr
-							+organisation(org)
-					else
-						h3.text-muted There are no organisations yet. 
+			h3.text-center Students
+			.row.about-organisers.col-md-offset-1.pb-2
+				each org in organisers2
+					.col-sm-4
+						+organiser(org)
+			
+			h3.text-center Senior Fellows
+			.row.about-organisers.col-md-offset-1.pb-2
+				each org in organisers
+					.col-sm-4
+						+organiser(org)
+			
+			h3.text-center Faculty Sponsors
+			.row.about-organisers.col-md-offset-1.pb-2
+				each org in organisers1
+					.col-sm-4
+						+organiser(org)
+			
+		article.section#partners: .container
+			h1.text-center Our Partners
+			
+			.organisations
+				if organisations.length
+					each org, i in organisations
+						if i
+							hr
+						+organisation(org)
+				else
+					h3.text-muted There are no organisations yet. 
+
+		article.section#timeline: .container
+			h1.text-center.pb-1 Our History
+			
+			.timeline
+				.timeline-path
+				.timeline-item--offset
+				// Event 1
+				.timeline-item.timeline-item--odd
+					.timeline-item-node
+					.timeline-item-inner
+						h6.text-caps.text-danger Now
+						h4 Apply for Funding
+						!=utils.cropString("mentor intros, expert advice, workshops, and startup support from the GW Innovation Center", 240, '...', true )
+				// Event 2
+				.timeline-item.timeline-item--even
+					.timeline-item-node
+					.timeline-item-inner
+						h6.text-caps.text-danger 12 weeks
+						h4 Stage I
+						!=utils.cropString("$100-300 prototype and team development", 240, '...', true )
+				// Event 3
+				.timeline-item.timeline-item--odd
+					.timeline-item-node
+					.timeline-item-inner
+						h6.text-caps.text-danger 12 weeks
+						h4 Stage II
+						!=utils.cropString("$300-500 validation - customer, innovation, impact, market discovery", 240, '...', true )
+				// Event 4
+				.timeline-item.timeline-item--even
+					.timeline-item-node
+					.timeline-item-inner
+						h6.text-caps.text-danger Up to a year
+						h4 Stage III
+						!=utils.cropString("$1,000 rapid prototyping & redesign", 240, '...', true )
+				// Event 5
+				.timeline-item.timeline-item--odd
+					.timeline-item-node
+					.timeline-item-inner
+						h6.text-caps.text-danger To infinity and beyond
+						h4 Stage IV
+						!=utils.cropString("variable follow up investment from the fund and/or investor intros", 240, '...', true )
 
 block js
 	// twitter

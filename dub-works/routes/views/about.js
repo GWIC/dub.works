@@ -1,5 +1,7 @@
 var keystone = require('keystone');
 
+var Organisation = keystone.list('Organisation');
+
 exports = module.exports = function(req, res) {
 
 	var view = new keystone.View(req, res),
@@ -30,6 +32,8 @@ exports = module.exports = function(req, res) {
 		{ name: 'Sebastian Lora', image: '/images/organisers/sharkie_400_round.png', title: 'Diversity and Inclusion', profile: '/member/sharkie' },
 		{ name: 'Isabella Sardegna', image: '/images/organisers/sharkie_400_round.png', title: 'Community Relations', profile: '/member/sharkie'},
 	]
+
+	view.query('organisations', Organisation.model.find().sort('name'), 'members');
 
 	view.render('site/about');
 }
