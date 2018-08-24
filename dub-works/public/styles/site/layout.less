@@ -264,12 +264,13 @@ body {
 
 // Page section
 .section {
-	padding-bottom: @page-padding * 1.5;
-	padding-top: @page-padding * 1.5;
+	padding-bottom: @page-padding * 1;
+	// padding-top: (@page-padding * 1.5) + (@navbar-height + 10);
+	padding-top: 4em;
 }
 .section--featured {
 	padding-bottom: @page-padding * 1;
-	padding-top: @page-padding * 2.5;
+	padding-top: @page-padding * 1.5;
 }
 
 // Add space at the top on tiny screens
@@ -368,23 +369,87 @@ body {
 
 // Project models
 // -----------------------------
+.proj {
+	// width: 900px;
+  // max-width: 80%;
+  border: 2px solid @brand-primary;
+	border-top: none;
+  text-align: center;
+  margin: 60px auto;
 
-.proj__heading {
-	margin-top: 0;
-
-	a {
-		color: @headings-color;
+	.top-border{
+	  position: absolute;
+	  height: 2px;
+	  width: 10%;
+	  background-color: @brand-primary;
 	}
-}
 
-.proj__project_lead {
-	display: block;
-	margin-bottom: 20px;
-}
+	.right {
+	  right: @padding-large-vertical;
+	}
 
-@media (min-width: @screen-sm-min) {
-	.proj__project_lead img {
-		.img-responsive();
+	.left {
+	  left: @padding-large-vertical;
+	}
+
+	.proj__heading {
+		position: relative;
+		margin-top: -14px;
+		display: inline-block;
+		letter-spacing: 4px;
+
+		a {
+			color: @headings-color;
+		}
+	}
+
+	.proj__project_lead {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.proj__description {
+		position: relative;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.5s ease;
+		display: block;
+	}
+
+	&:hover .proj__description {
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+
+	.proj__quote {
+		position: relative;
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.5s ease;
+		display: inline-block;
+	}
+
+	&:hover .proj__quote {
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		.proj__project_lead img {
+			.img-responsive();
+		}
+	}
+
+	@media (max-width: 685px) {
+		.top-border {
+			width:50%;
+		}
+
+		.proj__heading {
+	    margin: 20px 6px;
+	  }
 	}
 }
 

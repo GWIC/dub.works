@@ -12,27 +12,26 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 
 	locals.navLinks = [
-		{ label: 'Home',	key: 'home',		href: '/' },
-		{ label: 'about',	key: 'about',		pages: [
-			{ label: 'what we do',      subkey: 'whatwedo',     href: '/about#what-we-do' },
-			{ label: 'our history',     subkey: 'ourhistory',     href: '/about#our-history' },
-			{ label: 'our team',       subkey: 'ourteam',      href: '/about#our-team' }
+		{ label: 'Home',	        key: 'home',		    href: '/' },
+		{ label: 'about',	        key: 'about',		    href: '/about',     pages: [
+			{ label: 'what we do',	     key: 'whatwedo',		     href: '/about#what-we-do' },
+			{ label: 'our history',	     key: 'ourhistory',	     href: '/about#our-history' },
+			{ label: 'our team',		     key: 'ourteam',	       href: '/about#our-team' }
 		] },
-		{ label: 'events',	key: 'events',		pages: [
-			{ label: 'upcoming events',      subkey: 'upcomingevents',     href: '/events' },
-			{ label: 'request space',     subkey: 'requestspace',     href: '/events' },
-			{ label: 'past events',       subkey: 'pastevents',      href: '/events' }
+		{ label: 'events',	      key: 'events',		  href: '/events',     pages: [
+			{ label: 'upcoming',	 key: 'upcomingevents',  href: '/events#upcoming-events' },
+			{ label: 'request space',    key: 'requestspace',    href: '/events#request-space' },
+			{ label: 'past events',      key: 'pastevents',      href: '/events#past-events' }
 		] },
-		{ label: 'projects',	key: 'projects', 	href:'/projects' },
+		{ label: 'projects',	    key: 'projects', 	  href:'/projects' },
 		//{ label: 'Members',	key: 'members',		href: '/members' },
 		//{ label: 'printing',	key: 'prints',		href: '/prints' },
-		{ label: 'funding',	key: 'funds',		href: '/funds' },
-		{ label: 'dub.works',	key: 'dub.works',		pages: [
-			{ label: 'virtual tour',      subkey: 'virtual tour',     href: '/dubworks' },
-			{ label: '3D printing',     subkey: 'printing',     href: '/dubworks' }
+		{ label: 'funding',	      key: 'funds',		    href: '/funds' },
+		{ label: 'our space',	    key: 'our space',   href: '/ourspace',  		pages: [
+			{ label: '3D printing',     key: 'printing',        href: '/ourspace#3d-printing' }
 		] },
-		{ label: 'blogs',	key: 'blog',		href: '/blog' },
-		{ label: 'contact',	key: 'contact',		href: '/contact' }
+		{ label: 'blogs',	        key: 'blog',	  	  href: '/blog' },
+		{ label: 'contact',	      key: 'contact',		  href: '/contact' }
 	];
 
 	locals.user = req.user;

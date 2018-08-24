@@ -19,16 +19,15 @@ header(id='header', role='banner', class=(section == 'home' ? 'header--home' : '
 			nav(role='navigation')
 				ul.navbar-nav.navbar-nav--left
 					each link in navLinks
-						if typeof(link.pages) === 'undefined'
-							li: a(href=link.href)= link.label
-						else
-							.dropdown: a= link.label
-								.dropdown-content
+						.dropdown: a(href=link.href)= link.label
+							.dropdown-content
+								if typeof(link.pages) != 'undefined'
 									each sublink in link.pages
 										li: a(href=sublink.href)= sublink.label
 										//- li(class=(section == sublink.subkey ? 'nav-item-' + sublink.subkey + ' active' : 'nav-item-' + sublink.subkey)): a(href=sublink.href)= sublink.label
 				
 				ul.navbar-nav.navbar-nav--right
+					.social-media
 						//-li: a(href='/Join', data-from=page.path).js-auth-trigger Join GWIC
 						li: a(href='https://facebook.com/gwinnovationcenter/').facebook
 						li: a(href='https://twitter.com/gwinnocenter').twitter

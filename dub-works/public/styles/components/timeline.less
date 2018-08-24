@@ -144,6 +144,80 @@
 	}
 }
 
+.room-reservation {
+  position: relative;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+
+  img {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 0;
+  }
+
+  .title {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    top: 120px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: orange;
+    z-index: 1;
+    transition: top .5s ease;
+  }
+
+  .button {
+    position: absolute;
+    width: 500px;
+    left:0;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    color: #FF820E;
+    transition: opacity .35s ease;
+
+    a {
+      width: 200px;
+      padding: 12px 48px;
+      text-align: middle;
+      color: white;
+      border: solid 1px #FF820E;
+      border-radius: 10px;
+      color: #FF820E;
+      z-index: 1;
+    }
+  }
+}
+
+.room-reservation:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.room-reservation:hover .title {
+  top: 90px;
+}
+
+.room-reservation:hover .button {
+  opacity: 1;
+}
+
 
 // small screens
 
@@ -212,5 +286,4 @@
 			}
 		}
 	}
-
 }
