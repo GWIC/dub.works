@@ -46,6 +46,7 @@ node_modules/
 .idea/*
 *.iml
 .project
+.vscode
 
 # Ruby Managers
 .rbenv
