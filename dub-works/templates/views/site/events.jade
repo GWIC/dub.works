@@ -19,16 +19,20 @@ block intro
 				.item
 					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
 
+
 block content
 	.page-content
 		.section#upcoming-events: .container
 			h2.text-center Our Next Event
 			
 			if upcomingMeetup
-				+meetup(upcomingMeetup)
+				each meetup, i in upcomingMeetup
+					+meetup(meetup)
+					br
 			else
 				p.text-center No upcoming events planned...
 
+		
 
 		.section#past-events: .container
 			h2.text-center.pb-1 Past Events

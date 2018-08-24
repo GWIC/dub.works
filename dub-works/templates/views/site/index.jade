@@ -10,10 +10,20 @@ include ../../mixins/organiser
 block intro
 	article#hero.hero-meetup
 		//- Intro
-		section.hero-intro.hero-intro--hasmask
+		section.hero-intro.hero-intro--hasmask#hero-fade
 			.hero-background.position-relative#hero-fade
 			.hero-intro-content
-				img(src="images/Innovating.png" style="width: 80vw")
+				//- tr
+				//- 	th.title-left GWIC |
+				//- 	th.title-right Powering Interdisciplinary Minds to Create Social Change
+				.row
+					.col-md-4.col-md-offset-2.ph-0
+						.title-left GWIC
+					.col-md-4.ph-0
+						.title-right Powering 
+						.title-right Interdisciplinary 
+						.title-right Minds To Create 
+						.title-right Social Change
 					
 		#projectFacts.sectionClass
 			.fullWidth.eight.columns
@@ -84,14 +94,6 @@ block intro
 
 //- JS
 block js
-
-	if meetup
-		script.
-			SydJS.currentMeetupId = !{JSON.stringify(meetup.id)};
-	if user
-		script.
-			SydJS.user = !{JSON.stringify(user)};
-
 	//- REACT SCRIPTS
 	script(src='/js/packages.js')
 	script(src='/js/home.js')

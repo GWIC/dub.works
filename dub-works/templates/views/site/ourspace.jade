@@ -17,82 +17,119 @@ block intro
 block content
 	.page-content
 	//- rip in peace little 3d printer. canvas#canvas
-	.section#virtual-tour: .container
-		p.lead.text-center M06
-			.container
-				#myCarousel.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
-					//-Indicators
-					ol.carousel-indicators
-						li.active(data-target='#myCarousel', data-slide-to='0')
-						li(data-target='#myCarousel', data-slide-to='1')
-						li(data-target='#myCarousel', data-slide-to='2')
-					//-Wrapper for slides
-					.carousel-inner
-						.item.active
-							img(src='/images/placeholders/sydney-1.jpg', alt='Los Angeles')
-						.item
-							img(src='/images/placeholders/sydney-2.jpg', alt='Chicago')
-						.item
-							img(src='/images/placeholders/sydney-3.jpg', alt='New York')
-					//-Left and right controls
-					a.left.carousel-control(href='#myCarousel', data-slide='prev')
-						span.glyphicon.glyphicon-chevron-left
-						span.sr-only Previous
-					a.right.carousel-control(href='#myCarousel', data-slide='next')
-						span.glyphicon.glyphicon-chevron-right
-						span.sr-only Next
-		p.lead.text-center Diner
-			.container
-				#carousel-example-generic.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
-					ol.carousel-indicators
-						li.active(data-target='#carousel-example-generic', data-slide-to='0')
-						li(data-target='#carousel-example-generic', data-slide-to='1')
-						li(data-target='#carousel-example-generic', data-slide-to='2')
-						li(data-target='#carousel-example-generic', data-slide-to='3')
-					.carousel-inner(role='listbox', style='height:50vh')
-						.item.active
-							img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
-		p.lead.text-center Unconference
-			.container
-				#carousel-example-generic.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
-					ol.carousel-indicators
-						li.active(data-target='#carousel-example-generic', data-slide-to='0')
-						li(data-target='#carousel-example-generic', data-slide-to='1')
-						li(data-target='#carousel-example-generic', data-slide-to='2')
-						li(data-target='#carousel-example-generic', data-slide-to='3')
-					.carousel-inner(role='listbox', style='height:50vh')
-						.item.active
-							img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
-		p.lead.text-center Proto-Lab
-			.container
-				#carousel-example-generic.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
-					ol.carousel-indicators
-						li.active(data-target='#carousel-example-generic', data-slide-to='0')
-						li(data-target='#carousel-example-generic', data-slide-to='1')
-						li(data-target='#carousel-example-generic', data-slide-to='2')
-						li(data-target='#carousel-example-generic', data-slide-to='3')
-					.carousel-inner(role='listbox', style='height:50vh')
-						.item.active
-							img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
-						.item
-							img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
-								
+	.container
+		h2.text-center Our Spaces
+
+		.row
+			.col-md-4
+				.room-reservation
+					img(src='http://25cacef59bc4232fc0c9-2edab53a40907c7f87a9f314ea7b177c.r68.cf1.rackcdn.com/XLGallery/Le-Meridien-Piccadilly--Classic-Room.jpg', alt='')
+					p.title Main Space
+					.overlay
+					.button
+						a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform')
+							| Request Space
+			.col-md-4.col-md-offset-2
+				.room-reservation
+					img(src='http://25cacef59bc4232fc0c9-2edab53a40907c7f87a9f314ea7b177c.r68.cf1.rackcdn.com/XLGallery/Le-Meridien-Piccadilly--Classic-Room.jpg', alt='')
+					p.title Kitchen
+					.overlay
+					.button
+						a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform')
+							| Request Space
+		
+		.row
+			.col-md-4				
+				.room-reservation
+					img(src='http://25cacef59bc4232fc0c9-2edab53a40907c7f87a9f314ea7b177c.r68.cf1.rackcdn.com/XLGallery/Le-Meridien-Piccadilly--Classic-Room.jpg', alt='')
+					p.title Mentor Cafe
+					.overlay
+					.button
+						a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform')
+							| Request Space
+			.col-md-4.col-md-offset-2
+				.room-reservation
+					img(src='http://25cacef59bc4232fc0c9-2edab53a40907c7f87a9f314ea7b177c.r68.cf1.rackcdn.com/XLGallery/Le-Meridien-Piccadilly--Classic-Room.jpg', alt='')
+					p.title Unconference Room
+					.overlay
+					.button
+						a(href='https://docs.google.com/forms/d/e/1FAIpQLSe-oSb6E-3_XSlNhxjhdWfZo79HYlBy9b_-prSy_SUyfkONRQ/viewform')
+							| Request Space
+		//- p.lead.text-center M06
+		//- 	.container
+		//- 		#myCarousel.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
+		//- 			//-Indicators
+		//- 			ol.carousel-indicators
+		//- 				li.active(data-target='#myCarousel', data-slide-to='0')
+		//- 				li(data-target='#myCarousel', data-slide-to='1')
+		//- 				li(data-target='#myCarousel', data-slide-to='2')
+		//- 			//-Wrapper for slides
+		//- 			.carousel-inner
+		//- 				.item.active
+		//- 					img(src='/images/placeholders/sydney-1.jpg', alt='Los Angeles')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-2.jpg', alt='Chicago')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-3.jpg', alt='New York')
+		//- 			//-Left and right controls
+		//- 			a.left.carousel-control(href='#myCarousel', data-slide='prev')
+		//- 				span.glyphicon.glyphicon-chevron-left
+		//- 				span.sr-only Previous
+		//- 			a.right.carousel-control(href='#myCarousel', data-slide='next')
+		//- 				span.glyphicon.glyphicon-chevron-right
+		//- 				span.sr-only Next
+		//- p.lead.text-center Diner
+		//- 	.container
+		//- 		#carousel-example-generic.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
+		//- 			ol.carousel-indicators
+		//- 				li.active(data-target='#carousel-example-generic', data-slide-to='0')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='1')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='2')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='3')
+		//- 			.carousel-inner(role='listbox', style='height:50vh')
+		//- 				.item.active
+		//- 					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
+		//- p.lead.text-center Unconference
+		//- 	.container
+		//- 		#carousel-example-generic.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
+		//- 			ol.carousel-indicators
+		//- 				li.active(data-target='#carousel-example-generic', data-slide-to='0')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='1')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='2')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='3')
+		//- 			.carousel-inner(role='listbox', style='height:50vh')
+		//- 				.item.active
+		//- 					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
+		//- p.lead.text-center Proto-Lab
+		//- 	.container
+		//- 		#carousel-example-generic.carousel(style='margin-bottom:70px; height:50vh; width: 120vh;').slide(data-ride='carousel')
+		//- 			ol.carousel-indicators
+		//- 				li.active(data-target='#carousel-example-generic', data-slide-to='0')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='1')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='2')
+		//- 				li(data-target='#carousel-example-generic', data-slide-to='3')
+		//- 			.carousel-inner(role='listbox', style='height:50vh')
+		//- 				.item.active
+		//- 					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
+		//- 				.item
+		//- 					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
+		//- 
 	.section#printing: .container
 		h1.text-center.draw.meet 3D Printing
 			h2.text-center Print Cam
