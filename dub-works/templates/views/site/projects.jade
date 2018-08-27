@@ -3,14 +3,12 @@ extends ../../layouts/default
 include ../../mixins/project
 
 block intro
-	.section#hero.hero-meetup.hero-meetup--next
-		section.hero-intro-sm.hero-intro--hasmask
-			.hero-background
-
-	.container-sm.pt-2
-		.page-intro
-			h1.page-title Projects
-			p.lead Oh the places you'll go...
+	article#hero.hero-meetup
+		//- Intro
+		section.hero-intro.hero-intro--hasmask#hero-fade
+			.hero-background.position-relative#hero-fade
+			.hero-intro-content
+				h1.title Projects
 
 block content
 	.section#projects: .container

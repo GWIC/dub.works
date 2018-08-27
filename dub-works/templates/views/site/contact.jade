@@ -1,13 +1,15 @@
 extends ../../layouts/default
 
 block intro
-		article#hero.hero-meetup.hero-meetup--next
-			section.hero-intro-sm.hero-intro--hasmask
-				.hero-background
+	article#hero.hero-meetup
+		//- Intro
+		section.hero-intro.hero-intro--hasmask#hero-fade
+			.hero-background.position-relative#hero-fade
+			.hero-intro-content
+				h1.page-title Contact Us
 
 		.container-sm.pt-2
 			.page-intro
-				h1.page-title Contact Us
 				p.lead We'd love to hear from you!
 
 block content

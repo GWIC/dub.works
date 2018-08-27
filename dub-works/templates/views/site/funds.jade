@@ -1,28 +1,34 @@
 extends ../../layouts/default
 
 block intro
-	//- article#hero.hero-meetup.hero-meetup--next
-	//- 	section.hero-intro.hero-intro--hasmask
-	//- 		.hero-background
-	//- 		.hero-intro-content
-	//- 			h1.title Funding
-	//- 			p.lead Alumni-sponsored seed fund for student startups
-
-	.container-sm
-		.page-intro
-			h1.page-title Funding
-			p.lead Alumni-sponsored seed fund for student startups
+	article#hero.hero-meetup
+		//- Intro
+		section.hero-intro.hero-intro--hasmask#hero-fade
+			.hero-background.position-relative#hero-fade
+			.hero-intro-content
+				h1.title Funding
 
 block content
 	.page-content
+		.section#request-funding: .container
+			.row
+				.col-sm-4.col-sm-offset-2
+					a(href='https://docs.google.com/forms/d/e/1FAIpQLSeJU3Wzd5XafueenjPmuC54dRmb8VK7e8z9_1Dx0lp09PXF6g/viewform?ts=5a79f+087', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Apply for Funding
+				.col-sm-4
+					a(href='http://dub.works/funds#timeline', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Learn More
+
 		.section#timeline: .container
+			h2.text-center.pb-2 The Funding Stages
+
 			.timeline
 				.timeline-path
 				.timeline-item--offset
 				// Apply
 				.timeline-item.timeline-item--odd
 					.timeline-item-node
-					a(href="https://docs.google.com/forms/d/e/1FAIpQLSeJU3Wzd5XafueenjPmuC54dRmb8VK7e8z9_1Dx0lp09PXF6g/viewform?ts=5a79f+087").timeline-item-inner-special
+					.timeline-item-inner
 						h6.text-caps.text-danger Now
 						h4 Apply for Funding
 						!=utils.cropString("mentor intros, expert advice, workshops, and startup support from the GW Innovation Center", 240, '...', true )

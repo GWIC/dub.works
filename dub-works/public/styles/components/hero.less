@@ -42,29 +42,6 @@
 			}
 		}
 
-		.hero-background-dubworks {
-			.ground;
-			background: url("/images/dubworks.jpg") no-repeat center center;
-			top: 0;
-			left: 0;
-			background-size: cover;
-			display: block;
-			height: @hero-intro-height-hf;
-			// width: 100vh;
-
-			// Scrolling effect
-			&.position-fixed {
-				position: fixed;
-			}
-			&.position-absolute {
-				position: absolute;
-			}
-
-			&.position-relative {
-				position: relative;
-			}
-		}
-
 		.hero-intro-content {
 			.hv-centered;
 			width: 90%;
@@ -73,6 +50,7 @@
 			color: currentColor;
 			text-transform: uppercase;
 			font-weight: 900;
+			margin-top: -(@navbar-height)*2
 		}
 	}
 
@@ -110,9 +88,11 @@
 			width: 90%;
 		}
 		.title {
+			font-size: 7vw;
 			color: currentColor;
 			text-transform: uppercase;
-			font-weight: 900;
+			font-weight: 500;
+			margin-top: (@navbar-height)*2.5;
 		}
 		.title-left {
 			font-size: 10vw;
@@ -215,97 +195,4 @@
 .hero-intro.hero-intro--hasmask {
 	#gradient .vertical(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
 	//box-shadow: inset 0 0 20em rgba(0,0,0,0.3);
-}
-
-// Meet up
-.hero-meetup { }
-
-// Next meet up
-.hero-meetup--next {
-	.hero-background {
-		background: url('/images/placeholders/sydney-4.jpg') no-repeat center center / cover;
-		background-color: @gray-dark;
-	}
-}
-
-// Last meet up
-.hero-meetup--last { }
-
-
-// Talks list
-.talks-list {
-	li {
-	}
-	li + li {
-		margin-top: 1em;
-	}
-	.talkers {
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 100%;
-
-		img {
-			.floor-1;
-			position: absolute;
-			display: block;
-			max-width: 100%;
-			border: 3px solid white;
-		}
-		// 1 talker
-		img:nth-child(1):nth-last-child(1) {
-			width: 100%;
-		}
-		// 2 talkers
-		img:first-child:nth-last-child(2),
-		img:first-child:nth-last-child(2) ~ img {
-			width: 60%;
-		}
-		img:first-child:nth-last-child(2) ~ img {
-			.floor-2;
-			top: 10px;
-			right: 0;
-		}
-
-	}
-	.talk-summary {
-		.title {
-			font-weight: 700;
-			margin-bottom: 0.25em;
-		}
-		.subtitle {
-			font-size: @font-size-base;
-		}
-		.summary {
-			font-size: @font-size-base * 1.1;
-		}
-	}
-}
-
-// Attending list
-.attending {
-	margin-top: 4em;
-}
-.heading-with-line {
-	position: relative;
-	overflow: hidden;
-	line-height: 1.5;
-	text-align: center;
-	&:after,&:before {
-		position: relative;
-		display: inline-block;
-		width: 50%;
-		height: 1px;
-		background: lighten(@gray-light, 10%);
-		content: '';
-		vertical-align: middle;
-	}
-	&:before { right: 1em; margin-left: -50%; }
-	&:after { left: 1em; margin-right: -50%; }
-}
-.attendees-list {
-	margin-top: 4em;
-	li {
-		margin: 0.25em 0;
-	}
 }

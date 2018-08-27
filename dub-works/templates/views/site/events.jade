@@ -1,24 +1,13 @@
 extends ../../layouts/default
 include ../../mixins/meetup
 
-//- block intro
-//- 	.container
-//- 		#carousel-example-generic.carousel(style='margin-top:-72px; height:40vh;').slide(data-ride='carousel')
-//- 			ol.carousel-indicators
-//- 				li.active(data-target='#carousel-example-generic', data-slide-to='0')
-//- 				li(data-target='#carousel-example-generic', data-slide-to='1')
-//- 				li(data-target='#carousel-example-generic', data-slide-to='2')
-//- 				li(data-target='#carousel-example-generic', data-slide-to='3')
-//- 			.carousel-inner(role='listbox', style='height:40vh')
-//- 				.item.active
-//- 					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
-//- 				.item
-//- 					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
-//- 				.item
-//- 					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
-//- 				.item
-//- 					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
-
+block intro
+	article#hero.hero-meetup
+		//- Intro
+		section.hero-intro.hero-intro--hasmask#hero-fade
+			.hero-background.position-relative#hero-fade
+			.hero-intro-content
+				h1.title events
 
 block content
 	.page-content

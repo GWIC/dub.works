@@ -3,9 +3,15 @@ extends ../../layouts/default
 include ../../mixins/post
 
 block intro
+	article#hero.hero-meetup
+		//- Intro
+		section.hero-intro.hero-intro--hasmask#hero-fade
+			.hero-background.position-relative#hero-fade
+			.hero-intro-content
+				h1.title GWIC Blogs
+				
 	.page-intro: .container
-		h1.page-title=data.category ? data.category.name : 'Blogs'
-		p.lead
+		p.lead(style= 'padding: 50px;')
 			| This is the blog of the GW Innovation Center, written by Randy Graves and guest authors.
 
 block content
