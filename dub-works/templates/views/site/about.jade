@@ -14,6 +14,10 @@ block intro
 
 block content
 	.page-content
+		.section#multipager: .container
+			.row: .col-sm-4.col-sm-offset-4
+				a(href='http://dub.works/docs/gwic_multipager.pdf', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+					span.text-caps View Our Multi-Pager
 		.section#what-we-do: .container
 			h1.text-center What We Do
 			p.lead The GW experience was and, to some, still is largely tailored for the young international entrepreneur, catering to the political scientists and communicators promising to make history.
@@ -30,56 +34,49 @@ block content
 				.timeline-item.timeline-item--odd
 					.timeline-item-node
 					.timeline-item-inner
-						h6.text-caps.text-danger Now
-						h4 Apply for Funding
-						!=utils.cropString("mentor intros, expert advice, workshops, and startup support from the GW Innovation Center", 240, '...', true )
+						h6.text-caps.text-danger 4 Scores
+						h4 We innovated
+						!=utils.cropString("First mover advantage crowdfunding conversion assets business-to-business stealth.", 240, '...', true )
 				// Event 2
 				.timeline-item.timeline-item--even
 					.timeline-item-node
 					.timeline-item-inner
-						h6.text-caps.text-danger 12 weeks
-						h4 Stage I
-						!=utils.cropString("$100-300 prototype and team development", 240, '...', true )
+						h6.text-caps.text-danger 7 Years Ago
+						h4 And innovated some more
+						!=utils.cropString("Hackathon interaction design launch party infographic social media analytics churn rate incubator business plan learning curve long tail social proof.", 240, '...', true )
 				// Event 3
 				.timeline-item.timeline-item--odd
 					.timeline-item-node
 					.timeline-item-inner
-						h6.text-caps.text-danger 12 weeks
-						h4 Stage II
-						!=utils.cropString("$300-500 validation - customer, innovation, impact, market discovery", 240, '...', true )
+						h6.text-caps.text-danger Last Week
+						h4 Still innovating
+						!=utils.cropString("Crowdfunding learning curve sales branding hackathon traction ownership network effects.", 240, '...', true )
 				// Event 4
 				.timeline-item.timeline-item--even
 					.timeline-item-node
 					.timeline-item-inner
-						h6.text-caps.text-danger Up to a year
-						h4 Stage III
-						!=utils.cropString("$1,000 rapid prototyping & redesign", 240, '...', true )
-				// Event 5
-				.timeline-item.timeline-item--odd
-					.timeline-item-node
-					.timeline-item-inner
-						h6.text-caps.text-danger To infinity and beyond
-						h4 Stage IV
-						!=utils.cropString("variable follow up investment from the fund and/or investor intros", 240, '...', true )
-
+						h6.text-caps.text-danger Yesterday
+						h4 Innovatively
+						!=utils.cropString("Influencer creative business-to-business venture.", 240, '...', true )
+				
 		.section#our-team: .container
 			h2.text-center Meet the GWIC Team
 			
-			h3.text-center Students
+			h3.text-center Fellows
 			.row.about-organisers.col-md-offset-1.pb-2
-				each org in organisers2
+				each org in fellows
 					.col-sm-4
 						+organiser(org)
 			
-			h3.text-center Senior Fellows
+			h3.text-center Fellows of Distinction
 			.row.about-organisers.col-md-offset-1.pb-2
-				each org in organisers
+				each org in fellows_distinction
 					.col-sm-4
 						+organiser(org)
 			
-			h3.text-center Faculty Sponsors
+			h3.text-center Experts
 			.row.about-organisers.col-md-offset-1.pb-2
-				each org in organisers1
+				each org in experts
 					.col-sm-4
 						+organiser(org)
 			

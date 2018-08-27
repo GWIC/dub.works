@@ -1,23 +1,23 @@
 extends ../../layouts/default
 include ../../mixins/meetup
 
-block intro
-	.container
-		#carousel-example-generic.carousel(style='margin-top:-72px; height:40vh;').slide(data-ride='carousel')
-			ol.carousel-indicators
-				li.active(data-target='#carousel-example-generic', data-slide-to='0')
-				li(data-target='#carousel-example-generic', data-slide-to='1')
-				li(data-target='#carousel-example-generic', data-slide-to='2')
-				li(data-target='#carousel-example-generic', data-slide-to='3')
-			.carousel-inner(role='listbox', style='height:40vh')
-				.item.active
-					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
-				.item
-					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
-				.item
-					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
-				.item
-					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
+//- block intro
+//- 	.container
+//- 		#carousel-example-generic.carousel(style='margin-top:-72px; height:40vh;').slide(data-ride='carousel')
+//- 			ol.carousel-indicators
+//- 				li.active(data-target='#carousel-example-generic', data-slide-to='0')
+//- 				li(data-target='#carousel-example-generic', data-slide-to='1')
+//- 				li(data-target='#carousel-example-generic', data-slide-to='2')
+//- 				li(data-target='#carousel-example-generic', data-slide-to='3')
+//- 			.carousel-inner(role='listbox', style='height:40vh')
+//- 				.item.active
+//- 					img(src='/images/placeholders/sydney-1.jpg', style='height:100%')
+//- 				.item
+//- 					img(src='/images/placeholders/sydney-2.jpg', style='height:100%')
+//- 				.item
+//- 					img(src='/images/placeholders/sydney-4.jpg', style='height:100%')
+//- 				.item
+//- 					img(src='/images/placeholders/sydney-3.jpg', style='height:100%')
 
 block content
 	.page-content
@@ -25,10 +25,13 @@ block content
 			h2.text-center Our Next Event
 			
 			if upcomingMeetup
-				+meetup(upcomingMeetup)
+				each meetup, i in upcomingMeetup
+					+meetup(meetup)
+					br
 			else
 				p.text-center No upcoming events planned...
 
+		
 
 		.section#past-events: .container
 			h2.text-center.pb-1 Past Events

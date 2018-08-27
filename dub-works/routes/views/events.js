@@ -13,9 +13,9 @@ exports = module.exports = function(req, res) {
 	locals.page.title = 'News and Events - dub.works';
 
 	view.query('upcomingMeetup',
-		Meetup.model.findOne()
+		Meetup.model.find()
 			.where('state', 'active')
-			.sort('-startDate')
+			.sort('startDate')
 	, 'talks[who]');
 
 	view.query('pastMeetups',
