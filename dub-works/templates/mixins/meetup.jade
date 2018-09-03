@@ -16,6 +16,7 @@ mixin meetup(meetup)
 				|  from #{meetup._.startDate.format('h:mma')} - #{meetup._.endDate.format('h:mma')}
 			if meetup.description
 				p!= meetup.description
+			
 			if meetup.talks.length
 				hr.mv-2
 				ul.meetup-talks

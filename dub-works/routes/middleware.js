@@ -15,12 +15,12 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Home',	        key: 'home',		    href: '/' },
 		{ label: 'about',	        key: 'about',		    href: '/about',     pages: [
 			{ label: 'what we do',	     key: 'whatwedo',		     href: '/about#what-we-do' },
-			{ label: 'our history',	     key: 'ourhistory',	     href: '/about#our-history' },
-			{ label: 'our team',		     key: 'ourteam',	       href: '/about#our-team' }
+			{ label: 'our community',	     key: 'ourcommunity',	     href: '/about#our-community' },
+			{ label: 'our team',		     key: 'ourteam',	       href: '/about#our-team' },
+			{ label: 'our partners',		key: 'ourpartners',			href: '/about#our-partners' }
 		] },
 		{ label: 'events',	      key: 'events',		  href: '/events',     pages: [
 			{ label: 'upcoming',	 key: 'upcomingevents',  href: '/events#upcoming-events' },
-			{ label: 'request space',    key: 'requestspace',    href: '/events#request-space' },
 			{ label: 'past events',      key: 'pastevents',      href: '/events#past-events' }
 		] },
 		{ label: 'projects',	    key: 'projects', 	  href:'/projects' },
@@ -28,7 +28,8 @@ exports.initLocals = function(req, res, next) {
 		//{ label: 'printing',	key: 'prints',		href: '/prints' },
 		{ label: 'funding',	      key: 'funds',		    href: '/funds' },
 		{ label: 'our space',	    key: 'our space',   href: '/ourspace',  		pages: [
-			{ label: '3D printing',     key: 'printing',        href: '/ourspace#3d-printing' }
+			{ label: '3D printing',     key: 'printing',        href: '/ourspace#3d-printing' },
+			{ label: 'reserve space',     key: 'reserve-space',        href: '/ourspace#reserve-space' }
 		] },
 		{ label: 'blogs',	        key: 'blog',	  	  href: '/blog' },
 		{ label: 'contact',	      key: 'contact',		  href: '/contact' }

@@ -1,11 +1,5 @@
 extends ../../layouts/default
 
-//- INCLUDES
-include ../../mixins/post
-include ../../mixins/meetup-talk
-include ../../mixins/advertisement
-include ../../mixins/organiser
-
 //- INTRO
 block intro
 	article#hero.hero-meetup
@@ -13,9 +7,6 @@ block intro
 		section.hero-intro.hero-intro--hasmask#hero-fade
 			.hero-background.position-relative#hero-fade
 			.hero-intro-content
-				//- tr
-				//- 	th.title-left GWIC |
-				//- 	th.title-right Powering Interdisciplinary Minds to Create Social Change
 				.row
 					.col-md-4.col-md-offset-2.ph-0
 						.title-left GWIC
@@ -24,41 +15,31 @@ block intro
 						.title-right Interdisciplinary 
 						.title-right Minds To Create 
 						.title-right Social Change
-					
-		#projectFacts.sectionClass
-			.fullWidth.eight.columns
-				.projectFactsWrap
-					.item.wow.fadeInUpBig.animated.animated(data-number='12', style='visibility: visible;')
-						i.fa.fa-globe
-						p#number1.number 7
-						span
-						p Langauges Spoken
-					.item.wow.fadeInUpBig.animated.animated(data-number='55', style='visibility: visible;')
-						i.fa.fa-users
-						p#number2.number 25
-						span
-						p Disciplines Represented
-					.item.wow.fadeInUpBig.animated.animated(data-number='359', style='visibility: visible;')
-						i.fa.fa-file
-						p#number3.number 1000
-						span
-						p One-Pagers Written
-					.item.wow.fadeInUpBig.animated.animated(data-number='246', style='visibility: visible;')
-						i.fa.fa-heart
-						p#number4.number 1
-						span
-						p Steve Jobs
-					
-				//-
-					.row.hv-centered
-						.col-md-4.col-md-offset-2
-							h1.title-main GWIC | 
-						.col-md-4
-							p.lead Powering Interdisciplinary Minds to Create Social Change
-				//-
-					h2.subtitle
-					a(href="#what-we-do").double-down-arrow
 
+				.row.pt-3: .col-sm-4.col-sm-offset-4
+					a(href='http://eepurl.com/dlJLSL', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+						span.text-caps Join Us!
+
+block content
+	//- Stats bar
+	#projectFacts.sectionClass
+		.fullWidth.eight.columns
+			.projectFactsWrap
+				.item.wow.fadeInUpBig.animated.animated(data-number='12', style='visibility: visible;')
+					i.fa.fa-globe
+					p#number1.number 7
+					span
+					p Langauges Spoken
+				.item.wow.fadeInUpBig.animated.animated(data-number='55', style='visibility: visible;')
+					i.fa.fa-users
+					p#number2.number 25
+					span
+					p Disciplines Represented
+				.item.wow.fadeInUpBig.animated.animated(data-number='359', style='visibility: visible;')
+					i.fa.fa-map-marker
+					p#number3.number 4
+					span
+					p Spaces
 
 //- JS
 block js
@@ -96,13 +77,4 @@ block js
 
 		$('#number1').jQuerySimpleCounter({end: 8,duration: 1000});
 		$('#number2').jQuerySimpleCounter({end: 25,duration: 1500});
-		$('#number3').jQuerySimpleCounter({end: 1000,duration: 2000});
-		$('#number4').jQuerySimpleCounter({end: 1,duration: 3000});
-
-
-	script.
-		$(document).ready(function(){
-			$(window).scroll(function(){
-				$("#hero-fade").css("opacity", 1 - $(window).scrollTop() / ($('#hero-fade').height() / 1.5));
-			});
-		});
+		$('#number3').jQuerySimpleCounter({end: 4,duration: 750});

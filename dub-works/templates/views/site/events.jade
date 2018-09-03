@@ -21,22 +21,20 @@ block content
 			else
 				p.text-center No upcoming events planned...
 
-		
-
 		.section#past-events: .container
-			h2.text-center.pb-1 Past Events
+			//- h2.text-center.pb-1 Past Events
 			
-			.timeline
-				.timeline-path
-				.timeline-item--offset
-				each meetup, i in pastMeetups
-					.timeline-item(class=i % 2 == 1 ? 'timeline-item--even' : 'timeline-item--odd')
-						.timeline-item-node
-						a(href=meetup.url).timeline-item-inner
-							h6.text-caps.text-danger= meetup._.startDate.format('MMMM - DD - YYYY')
-							h4= meetup.name
-							!=utils.cropString( utils.htmlToText(meetup.description), 240, '...', true )
-							//- !=utils.htmlToText(meetup.description)
+			//- .timeline
+			//- 	.timeline-path
+			//- 	.timeline-item--offset
+			//- 	each meetup, i in pastMeetups
+			//- 		.timeline-item(class=i % 2 == 1 ? 'timeline-item--even' : 'timeline-item--odd')
+			//- 			.timeline-item-node
+			//- 			a(href=meetup.url).timeline-item-inner
+			//- 				h6.text-caps.text-danger= meetup._.startDate.format('MMMM - DD - YYYY')
+			//- 				h4= meetup.name
+			//- 				!=utils.cropString( utils.htmlToText(meetup.description), 240, '...', true )
+			//- 				//- !=utils.htmlToText(meetup.description)
 							
 			if !upcomingMeetup && !pastMeetups.length
 				h3.text-muted There are no events yet...

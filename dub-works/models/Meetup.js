@@ -49,7 +49,7 @@ Meetup.relationship({ ref: 'RSVP', refPath: 'meetup', path: 'rsvps' });
 // ------------------------------
 
 Meetup.schema.virtual('url').get(function() {
-	return '/events/' + this.key;
+	return '/meetups/' + this.key;
 });
 
 Meetup.schema.virtual('remainingRSVPs').get(function() {

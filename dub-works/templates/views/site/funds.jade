@@ -116,12 +116,3 @@ block content
 							.col-sm-10.col-sm-offset-2
 								p.help-block Note: others can see your enquiry in the <a href='/keystone/enquiries'>Admin UI</a>
 								button(type='submit').btn.btn-primary Submit
-
-block js
-	// Dynamic scrolly thing
-	script.
-		$(document).ready(function(){
-			$(window).scroll(function(){
-				$("#hero").css("opacity", 1 - $(window).scrollTop() / ($('#hero').height() / 2));
-			});
-		});

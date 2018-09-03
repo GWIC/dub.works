@@ -24,43 +24,33 @@ block content
 			p.lead Established in 2016 as a student-centered entity, the GWIC operates as a passion-driven startup representing a radical new direction for experiential learning in higher education. We offer a broad range of scenarios and partnerships to create novel and valuable learning experiences for students from across the university. To do this, we engage in an open, free-flowing ideation process among students, faculty, staff, and our external partners.
 			p.lead The Innovation Center focuses on utilizing disruptive technology to make advances in education, healthcare and the environment. The cornerstone of our work is social engagement, a value closely linked to the practical nature of the problems we seek to address. The educational, opportunities created by our projects take learners outside of the confines of the classroom through immersive design and business planning processes that integrate science and art in new, creative ways.
 			
-		article.section#our-history: .container
-			h1.text-center.pb-1 Our History
-			
-			.timeline
-				.timeline-path
-				.timeline-item--offset
-				// Event 1
-				.timeline-item.timeline-item--odd
-					.timeline-item-node
-					.timeline-item-inner
-						h6.text-caps.text-danger 4 Scores
-						h4 We innovated
-						!=utils.cropString("First mover advantage crowdfunding conversion assets business-to-business stealth.", 240, '...', true )
-				// Event 2
-				.timeline-item.timeline-item--even
-					.timeline-item-node
-					.timeline-item-inner
-						h6.text-caps.text-danger 7 Years Ago
-						h4 And innovated some more
-						!=utils.cropString("Hackathon interaction design launch party infographic social media analytics churn rate incubator business plan learning curve long tail social proof.", 240, '...', true )
-				// Event 3
-				.timeline-item.timeline-item--odd
-					.timeline-item-node
-					.timeline-item-inner
-						h6.text-caps.text-danger Last Week
-						h4 Still innovating
-						!=utils.cropString("Crowdfunding learning curve sales branding hackathon traction ownership network effects.", 240, '...', true )
-				// Event 4
-				.timeline-item.timeline-item--even
-					.timeline-item-node
-					.timeline-item-inner
-						h6.text-caps.text-danger Yesterday
-						h4 Innovatively
-						!=utils.cropString("Influencer creative business-to-business venture.", 240, '...', true )
-				
+		article.section#our-community: .container
+			h1.text-center.pb-1 Our Community
+
+			.row
+				.col-lg-6
+					.hover-img-container
+						img(src="http://gwic.io/images/about/student-driven.jpg" style="width:100%").hover-zoom
+				.col-lg-6.pt-2
+					h3.text-center Human-Centered
+					p.lead At the local and global levels, we work with users and stakeholders to co-create positive social impact.
+			.row
+				.col-lg-6.pt-2
+					h3.text-center Inter-disciplinary
+					p.lead Combining disciplines from all ten GW schools, we approach solving complex issues by pairing many unique skill sets and minds.
+				.col-lg-6
+					.hover-img-container
+						img(src="http://gwic.io/images/about/student-driven.jpg" style="width:100%").hover-zoom
+			.row
+				.col-lg-6
+					.hover-img-container
+						img(src="http://gwic.io/images/about/student-driven.jpg" style="width:100%").hover-zoom
+				.col-lg-6.pt-2
+					h3.text-center Student-Driven
+					p.lead Student initiated and led projects that turn textbook study into real-world experiences sit at the heart of our organization.
+
 		.section#our-team: .container
-			h2.text-center Meet the GWIC Team
+			h1.text-center Our Team
 			
 			h3.text-center Fellows
 			.row.about-organisers.col-md-offset-1.pb-2
@@ -80,7 +70,7 @@ block content
 					.col-sm-4
 						+organiser(org)
 			
-		.section#partners: .container
+		.section#our-partners: .container
 			h1.text-center Our Partners
 			
 			.organisations
@@ -96,11 +86,3 @@ block js
 	// twitter
 	script.
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-	// Dynamic scrolly thing
-	script.
-		$(document).ready(function(){
-			$(window).scroll(function(){
-				$("#hero").css("opacity", 1 - $(window).scrollTop() / ($('#hero').height() / 2));
-			});
-		});

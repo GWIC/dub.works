@@ -1,52 +1,73 @@
 extends ../../layouts/default
 
+block css
+	link(href='//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css', rel='stylesheet', type='text/css')
+	style(type='text/css').
+		#mc_embed_signup{
+			clear:left;
+			font:14px Helvetica,Arial,sans-serif;
+			width:100%;
+		}
+
+
+		div input {
+			color: black	
+		}
+
+
 block intro
 	article#hero.hero-meetup
 		//- Intro
 		section.hero-intro.hero-intro--hasmask#hero-fade
 			.hero-background.position-relative#hero-fade
 			.hero-intro-content
-				h1.page-title Contact Us
-
-		.container-sm.pt-2
-			.page-intro
-				p.lead We'd love to hear from you!
+				h1.page-title We'd love to hear from you!
 
 block content
-	.page-content: .container
-		if enquirySubmitted
-			.jumbotron.text-center
-				h1 Success!
-		else
-			.row
-				.col-md-8
-					form(method='post').form-horizontal
-						input(type='hidden', name='action', value='contact')
-						.form-group(class=validationErrors.name ? 'has-error' : null)
-							label.col-sm-2.text-left.control-label Name
-							.col-sm-10
-								input(type='text' name='name.full' value=formData['name.full'] required placeholder="First Last").form-control
-						.form-group(class=validationErrors.email ? 'has-error' : null)
-							label.col-sm-2.control-label Email
-							.col-sm-10
-								input(type='email' name='email' value=formData.email required placeholder="name@domain.com").form-control
-						.form-group
-							label.col-sm-2.control-label Phone
-							.col-sm-10
-								input(type='text' name='phone' value=formData.phone placeholder='(optional)').form-control
-						.form-group(class=validationErrors.enquiryType ? 'has-error' : null required)
-							label.col-sm-2.control-label Subject
-							.col-sm-10
-								select(name='enquiryType').form-control
-									option(value='') (required)
-									each type in enquiryTypes
-										option(value=type.value selected=formData.enquiryType === type.value)= type.label
-						.form-group(class=validationErrors.message ? 'has-error' : null)
-							label.col-sm-2.control-label Message
-							.col-sm-10
-								textarea(name='message' placeholder='Leave us a message...' rows=4 required).form-control= formData.message
-						.form-group
-							.col-sm-10.col-sm-offset-2
-								// p.help-block Note: others can see your enquiry in the <a href='/keystone/enquiries'>Admin UI</a>
-								center
-									button(type='submit').btn.btn-primary Submit
+	.page-content
+		.section#subscribe: .container
+			h1.text-center Subscribe to our mailing list
+
+			.row: .col-sm-4.col-sm-offset-4
+				a(href='http://eepurl.com/dlJLSL', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
+					span.text-caps Join Us!
+		
+		.section#contact: .container
+			h1.text-center Leave us a message
+
+			if enquirySubmitted
+				.jumbotron.text-center
+					h1 Success!
+			else
+				.row
+					.col-md-8
+						form(method='post').form-horizontal
+							input(type='hidden', name='action', value='contact')
+							.form-group(class=validationErrors.name ? 'has-error' : null)
+								label.col-sm-2.text-left.control-label Name
+								.col-sm-10
+									input(type='text' name='name.full' value=formData['name.full'] required placeholder="First Last").form-control
+							.form-group(class=validationErrors.email ? 'has-error' : null)
+								label.col-sm-2.control-label Email
+								.col-sm-10
+									input(type='email' name='email' value=formData.email required placeholder="name@domain.com").form-control
+							.form-group
+								label.col-sm-2.control-label Phone
+								.col-sm-10
+									input(type='text' name='phone' value=formData.phone placeholder='(optional)').form-control
+							.form-group(class=validationErrors.enquiryType ? 'has-error' : null required)
+								label.col-sm-2.control-label Subject
+								.col-sm-10
+									select(name='enquiryType').form-control
+										option(value='') (required)
+										each type in enquiryTypes
+											option(value=type.value selected=formData.enquiryType === type.value)= type.label
+							.form-group(class=validationErrors.message ? 'has-error' : null)
+								label.col-sm-2.control-label Message
+								.col-sm-10
+									textarea(name='message' placeholder='Leave us a message...' rows=4 required).form-control= formData.message
+							.form-group
+								.col-sm-10.col-sm-offset-2
+									// p.help-block Note: others can see your enquiry in the <a href='/keystone/enquiries'>Admin UI</a>
+									center
+										button(type='submit').btn.btn-primary Submit
