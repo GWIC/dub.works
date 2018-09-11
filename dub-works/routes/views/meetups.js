@@ -28,16 +28,16 @@ exports = module.exports = function(req, res) {
 
 		if (!req.user || !locals.upcomingMeetup) return next();
 
-		RSVP.model.findOne()
-			.where('who', req.user._id)
-			.where('meetup', locals.upcomingMeetup)
-			.exec(function(err, rsvp) {
-				locals.rsvpStatus = {
-					rsvped: rsvp ? true : false,
-					attending: rsvp && rsvp.attending ? true : false
-				}
-				return next();
-			});
+		// RSVP.model.findOne()
+		// 	.where('who', req.user._id)
+		// 	.where('meetup', locals.upcomingMeetup)
+		// 	.exec(function(err, rsvp) {
+		// 		locals.rsvpStatus = {
+		// 			rsvped: rsvp ? true : false,
+		// 			attending: rsvp && rsvp.attending ? true : false
+		// 		}
+		// 		return next();
+		// 	});
 
 	});
 

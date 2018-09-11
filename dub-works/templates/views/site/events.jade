@@ -12,7 +12,7 @@ block intro
 block content
 	.page-content
 		.section#upcoming-events: .container
-			h2.text-center Our Next Event
+			h2.text-center Upcoming Events
 			
 			if upcomingMeetup
 				each meetup, i in upcomingMeetup
@@ -39,10 +39,9 @@ block content
 			if !upcomingMeetup && !pastMeetups.length
 				h3.text-muted There are no events yet...
 
-		.section#calendar: .container
-			iframe(src='https://calendar.google.com/calendar/embed?src=80a3tuu1pqtsg4ge3ovch5mbvg%40group.calendar.google.com&ctz=America%2FNew_York', style='border: 0', width='800', height='600', frameborder='0', scrolling='no')
-			
-
+		//- .section#calendar: .container
+		//- 	iframe(src='https://calendar.google.com/calendar/embed?src=80a3tuu1pqtsg4ge3ovch5mbvg%40group.calendar.google.com&ctz=America%2FNew_York', style='border: 0', width='800', height='600', frameborder='0', scrolling='no')
+		
 block js
 	script(src='/js/lib/bootstrap/carousel.js')
 	

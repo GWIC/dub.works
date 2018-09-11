@@ -19,8 +19,8 @@ var pkg = require('./package.json');
 
 keystone.init({
 
-	'name': 'dub.works',
-	'brand': 'dub.works',
+	'name': 'GWIC',
+	'brand': 'GWIC',
 	'back': '/me',
 
 	'favicon': 'public/favicon.ico',
@@ -78,7 +78,7 @@ keystone.set('locals', {
 
 // Admin UI navigation items
 keystone.set('nav', {
-	'meetups': ['meetups', 'talks', 'rsvps'],
+	'events': ['meetups', 'talks', 'rsvps'],
 	'members': ['users', 'organisations'],
 	'posts': ['posts', 'post-categories', 'post-comments'],
 	'links': ['links', 'link-tags', 'link-comments']

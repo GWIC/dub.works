@@ -22,4 +22,3 @@ Enquiry.track = true;
 Enquiry.defaultSort = '-createdAt';
 Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
 Enquiry.register();
-
