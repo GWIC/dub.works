@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 
 	locals.section = 'ourspace';
-	locals.page.title = 'ourspace';
+	locals.page.title = 'Our Space - GWIC';
 
 	view.render('site/ourspace');
 

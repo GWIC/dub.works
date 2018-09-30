@@ -8,7 +8,7 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 
 	locals.section = 'about';
-	locals.page.title = 'About dub.works';
+	locals.page.title = 'About - GWIC';
 
 	locals.fellows_distinction = [
 		{ name: 'Amb. Adras Simonyi, Ph.D', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie' },
@@ -19,6 +19,7 @@ exports = module.exports = function(req, res) {
 		{ name: 'Randy Graves, Ph.D', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie' },
 		{ name: 'Erica Wortham, Ph.D', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie' },
 	]
+	
 	locals.fellows = [
 		{ name: 'Konstantin Mitic', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie' },
 		{ name: 'Sarah Shavin', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie' },
@@ -30,6 +31,8 @@ exports = module.exports = function(req, res) {
 		{ name: 'Erin Flynn', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie'},
 		{ name: 'Logan Bartholomew', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie'},
 		{ name: 'Mimosa Giamanco', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie'},
+		{ name: 'Nam Tran', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie'},
+		{ name: 'Ryan Steed', image: '/images/organisers/profile-placeholder_400.jpg', title: '', profile: '/member/sharkie'},
 	]
 
 	view.query('organisations', Organisation.model.find().sort('name'), 'members');

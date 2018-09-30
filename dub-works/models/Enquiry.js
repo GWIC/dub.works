@@ -6,16 +6,16 @@ var Enquiry = new keystone.List('Enquiry', {
 });
 
 Enquiry.add({
-	name: { type: Types.Name, required: true },
-	email: { type: Types.Email, required: true },
-	phone: { type: String },
+	name: { type: Types.Name, required: true, noedit: true },
+	email: { type: Types.Email, required: true, noedit: true },
+	phone: { type: String, noedit: true },
 	enquiryType: { type: Types.Select, options: [
 		{ value: 'volunteer',	label: "I want to volunteer" },
 		{ value: 'idea',	label: "I have an idea/suggestion" },
 		{ value: 'question',	label: "I've got a question" },
 		{ value: 'other',	label: "Something else..." },
-	], required: true },
-	message: { type: Types.Textarea, required: true },
+	], required: true, noedit: true },
+	message: { type: Types.Textarea, required: true, noedit: true },
 });
 
 Enquiry.track = true;

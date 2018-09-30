@@ -8,6 +8,9 @@
 # FTP stuff
 .ftp*
 
+# Site Stuff
+.well-known
+
 # Vagrant stuff
 acceptance_config.yml
 boxes/*

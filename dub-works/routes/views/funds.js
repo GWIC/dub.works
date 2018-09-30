@@ -7,7 +7,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	locals.section = 'funds';
-	locals.page.title = 'Funding - dub.works';
+	locals.page.title = 'Funding - GWIC';
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;

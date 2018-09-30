@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
         locals = res.locals;
 
     locals.section = 'projects';
-    locals.page.title = 'Projects';
+    locals.page.title = 'Projects - GWIC';
 
     view.query('Project', Project.model.find().sort('name'));
 

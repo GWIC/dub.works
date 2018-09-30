@@ -11,7 +11,7 @@ exports = module.exports = function(req, res) {
 	locals.section = 'meetups';
 	locals.page.title = 'Meetups - dub.works';
 	
-	// locals.rsvpStatus = {};
+	locals.rsvpStatus = {};
 	
 	
 	// LOAD the Meetup
@@ -25,7 +25,7 @@ exports = module.exports = function(req, res) {
 				if (!meetup) return res.notfound('Post not found');
 				
 				locals.meetup = meetup;
-				// locals.meetup.populateRelated('talks[who] rsvps[who]', next);
+				locals.meetup.populateRelated('talks[who] rsvps[who]', next);
 				
 			});
 	});
@@ -33,22 +33,22 @@ exports = module.exports = function(req, res) {
 	
 	// // LOAD an RSVP
 	
-	// view.on('init', function(next) {
+	view.on('init', function(next) {
 	
-	// 	if (!req.user || !locals.meetup) return next();
+		if (!req.user || !locals.meetup) return next();
 		
-	// 	RSVP.model.findOne()
-	// 		.where('who', req.user._id)
-	// 		.where('meetup', locals.meetup)
-	// 		.exec(function(err, rsvp) {
-	// 			locals.rsvpStatus = {
-	// 				rsvped: rsvp ? true : false,
-	// 				attending: rsvp && rsvp.attending ? true : false
-	// 			}
-	// 			return next();
-	// 		});
+		RSVP.model.findOne()
+			.where('who', req.user._id)
+			.where('meetup', locals.meetup)
+			.exec(function(err, rsvp) {
+				locals.rsvpStatus = {
+					rsvped: rsvp ? true : false,
+					attending: rsvp && rsvp.attending ? true : false
+				}
+				return next();
+			});
 			
-	// });
+	});
 	
 	
 	view.render('site/meetup');

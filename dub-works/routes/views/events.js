@@ -10,7 +10,7 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 
 	locals.section = 'events';
-	locals.page.title = 'News and Events - dub.works';
+	locals.page.title = 'News and Events - GWIC';
 
 	view.query('upcomingMeetup',
 		Meetup.model.find()

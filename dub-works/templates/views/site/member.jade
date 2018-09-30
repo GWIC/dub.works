@@ -28,11 +28,11 @@ block content
 							if twitterUsername || githubUsername
 								.member__accounts.mb-1
 									if twitterUsername
-										a(href='https://twitter.com/' + twitterUsername, target='_blank', data-toggle='tooltip', data-title='@' + twitterUsername, data-placement='top').member__account.member__account--twitter.btn.btn-default
+										a(href='//twitter.com/' + twitterUsername, target='_blank', data-toggle='tooltip', data-title='@' + twitterUsername, data-placement='top').member__account.member__account--twitter.btn.btn-default
 											span.entypo-social.entypo-twitter
 											=twitterUsername
 									if githubUsername
-										a(href='https://github.com/' + githubUsername, target='_blank', data-toggle='tooltip', data-title=githubUsername, data-placement='top').member__account.member__account--github.btn.btn-default
+										a(href='//github.com/' + githubUsername, target='_blank', data-toggle='tooltip', data-title=githubUsername, data-placement='top').member__account.member__account--github.btn.btn-default
 											span.entypo-social.entypo-github
 											=githubUsername
 							if member.bio.html

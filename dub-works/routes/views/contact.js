@@ -7,7 +7,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	locals.section = 'contact';
-	locals.page.title = 'Contact - dub.works';
+	locals.page.title = 'Contact - GWIC';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};

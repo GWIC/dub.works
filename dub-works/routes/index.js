@@ -95,6 +95,7 @@ exports = module.exports = function (app) {
 	app.all('/contact', routes.views.contact);
 	app.all('/funds', routes.views.funds);
 	app.all('/ourspace', routes.views.ourspace);
+	app.all('/policies', routes.views.policies);
 
 	// Session
 	app.all('/join', routes.views.session.join);
