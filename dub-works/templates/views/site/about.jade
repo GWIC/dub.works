@@ -19,7 +19,11 @@ block intro
 block content
 	.page-content
 		.section#what-we-do: .container
+			div(style='padding:56.25% 0 0 0;position:relative;')
+				iframe(src='https://player.vimeo.com/video/292483044?title=0&byline=0&portrait=0', style='position:absolute;top:0;left:0;width:100%;height:100%;', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='', frameborder='0').pb-2
+			
 			h1.text-center GWIC Overview
+
 			p.lead The GWIC is an open, interdisciplinary, collaborative space in education where we support innovation through direct learning experiences and real-world social engagements.
 			p.lead Established in 2016 as a student-centered entity, the GWIC operates as a passion-driven startup representing a radical new direction for experiential learning in higher education. We offer a broad range of scenarios and partnerships to create novel and valuable learning experiences for students from across the university. To do this, we engage in an open, free-flowing ideation process among students, faculty, staff, and our external partners.
 			p.lead The Innovation Center focuses on utilizing disruptive technology to make advances in education, healthcare and the environment. The cornerstone of our work is social engagement, a value closely linked to the practical nature of the problems we seek to address. The educational, opportunities created by our projects take learners outside of the confines of the classroom through immersive design and business planning processes that integrate science and art in new, creative ways.
@@ -91,3 +95,4 @@ block js
 	// twitter
 	script.
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	script(src='https://player.vimeo.com/api/player.js')

@@ -9,6 +9,7 @@
 @hero-intro-height-sm: 75vh;
 @hero-intro-height-hf: 30vh;
 @hero-intro-height-xs: 75vh; // was 420px
+@hero-intro-height-full: 100vh;
 #hero {
 	position: relative;
 
@@ -111,15 +112,23 @@
 	//- Mobile
 	@media (max-width: @screen-sm-max) {
 		.hero-intro {
-			height: @hero-intro-height-xs;
+			height: @hero-intro-height-full;
+
+			.hero-background {
+				height: @hero-intro-height-full;
+			}
+		}
+
+		.hero-intro {
+			height: @hero-intro-height-full;
 
 			.title-left {
-				font-size: 9.3em;
+				font-size: 14vw;
 				text-align: center;
 				padding-right: 0px;
 			}
 			.title-right {
-				font-size: 2em;
+				font-size: 2.2vw;
 				text-align: center;
 				border-left: none;
 				padding-left: 0px;
