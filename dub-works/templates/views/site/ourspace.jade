@@ -5,7 +5,7 @@ include ../../../public/styles/components/border-animation.less
 block intro
 	article#hero.hero-meetup
 		//- Intro
-		section.hero-intro.hero-intro--hasmask#hero-fade
+		section.hero-intro-sm.hero-intro--hasmask#hero-fade
 			.hero-background.position-relative#hero-fade
 			.hero-intro-content
 				h1.title Our Space
@@ -13,43 +13,33 @@ block intro
 block content
 	.page-content
 		//- rip in peace little 3d printer. canvas#canvas
-		.section#our-spaces: .container
-			.row
-				.col-md-4
-					.room-reservation
-						img(src='/images/spaces/m06.JPG', alt='')
-						p.title M06
-						.overlay
-						.button
-							| Our Main Space in Tompkins Hall Mezzanine 06, just off the kitchen, is an area to work collaboratively or attend an event. We hold workshops, host speakers, and house ideation. It is the heart of the Innovation Center, and on a bright day.
-				.col-md-4.col-md-offset-2
-					.room-reservation
-						img(src='/images/spaces/diner.JPG', alt='')
-						p.title Diner
-						.overlay
-						.button
-							| To the right is our kitchen. Here, we catch up, laugh, snack and advise each other. It is the place where the Innovation Center family comes to decompress and refuel- there is always someone to welcome you.
-			.row
-				.col-md-4				
-					.room-reservation
-						img(src='/images/spaces/unconference.JPG', alt='')
-						p.title Unconference
-						.overlay
-						.button
-							| The unconference room, across the hall from M06, is multipurpose: a virtual reality and photo studio, library, and small-group meeting room. It is the place to take a phone call, sit crisscross on the floor, read a book or schedule time with collaborators. While you are there, remember to play around with the green screen.
-				.col-md-4.col-md-offset-2
-					.room-reservation
-						img(src='/images/spaces/protolab.JPG', alt='')
-						p.title Proto-Lab
-						.overlay
-						.button
-							| As you walk through our double glass doors, look to your left into the makerspace in the high bay below. We (will soon) have woodworking tools, laser cutters, 3D printers, sewing machines, and more. Makers come from across campus to build prototypes, make mistakes and discover designs or attend an event.
-		
 		.section#reserve-space: .container
-			.row: .col-sm-4.col-sm-offset-4
+			.row: .col-md-4.col-md-offset-4
 				a(href='mailto:thegwic@gmail.com?subject=Space%20Request&body=Time:%0A%0ADate:%0A%0AEvent%20Name:%0A%0AEvent%20Description:%0A', data-from=page.path).btn.btn-lg.btn-block.btn-primary.mv-1
 					span.text-caps Reserve a Space
-		
+		.section#our-spaces: .container
+			.row
+				.col-lg-6.room-reservation.pb-2
+					img(src='/images/spaces/m06.JPG', alt='')
+					p.title M06
+					.info
+						| Our Main Space in Tompkins Hall Mezzanine 06, just off the kitchen, is an area to work collaboratively or attend an event. We hold workshops, host speakers, and house ideation. It is the heart of the Innovation Center, and on a bright day.
+				.col-lg-6.room-reservation.pb-2
+					img(src='/images/spaces/diner.JPG', alt='')
+					p.title Diner
+					.info
+						| To the right is our kitchen. Here, we catch up, laugh, snack and advise each other. It is the place where the Innovation Center family comes to decompress and refuel- there is always someone to welcome you.
+			.row
+				.col-lg-6.room-reservation.pb-2
+					img(src='/images/spaces/unconference.JPG', alt='')
+					p.title Unconference
+					.info
+						| The unconference room, across the hall from M06, is multipurpose: a virtual reality and photo studio, library, and small-group meeting room. It is the place to take a phone call, sit crisscross on the floor, read a book or schedule time with collaborators. While you are there, remember to play around with the green screen.
+				.col-lg-6.room-reservation.pb-2
+					img(src='/images/spaces/protolab.JPG', alt='')
+					p.title Proto-Lab
+					.info
+						| As you walk through our double glass doors, look to your left into the makerspace in the high bay below. We (will soon) have woodworking tools, laser cutters, 3D printers, sewing machines, and more. Makers come from across campus to build prototypes, make mistakes and discover designs or attend an event.
 		.section#printing: .container
 			h1.text-center 3D Printing
 				h2.text-center Print Cam

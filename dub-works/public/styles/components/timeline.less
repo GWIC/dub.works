@@ -145,77 +145,47 @@
 }
 
 .room-reservation {
-  position: relative;
-  margin-top: 50px;
-  width: 500px;
-	height: 300px;
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #FFF;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.5s ease;
-  }
-
+  
   img {
-    position: absolute;
-    width: 500px;
-    height: 300px;
-		left: 0;
-		// filter: brightness(75%);
+    position: relative;
+		width: 100%;
+		-webkit-filter: brightness(90%);
+		-moz-filter: brightness(90%);
+		filter: brightness(90%);
+		transition: all 0.5s ease;
   }
 
   .title {
-    position: absolute;
-    width: 500px;
-    left: 0;
-    top: 120px;
+		.hv-centered;
     font-weight: 700;
-    font-size: 30px;
-    text-align: center;
+    font-size: 34px;
     text-transform: uppercase;
     color: @brand-primary;
     z-index: 1;
     transition: top .5s ease;
   }
 
-  .button {
-    position: absolute;
-    width: 500px;
-    left:0;
-    top: 180px;
+  .info {
+		.hv-centered;
+		width: 75%;
     text-align: center;
     opacity: 0;
     color: @brand-primary;
     transition: opacity .35s ease;
-
-    a {
-      width: 200px;
-      padding: 12px 48px;
-      text-align: middle;
-      color: white;
-      border: solid 1px @brand-primary;
-      border-radius: 10px;
-      color: @brand-primary;
-      z-index: 1;
-    }
   }
 }
 
-.room-reservation:hover .overlay {
-  display: block;
-  background: rgba(0, 0, 0, .7);
+.room-reservation:hover img {
+  -webkit-filter: brightness(50%);
+	-moz-filter: brightness(50%);
+	filter: brightness(50%);
 }
 
 .room-reservation:hover .title {
-  top: 90px;
+  top: 20%;
 }
 
-.room-reservation:hover .button {
+.room-reservation:hover .info {
   opacity: 1;
 }
 
