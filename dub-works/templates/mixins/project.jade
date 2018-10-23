@@ -4,15 +4,15 @@ mixin project(proj)
     .top-border.left
     h3.proj__heading
         = proj.name
-    .row(id=proj.id)
+    //- .row(id=proj.id)
       //- .col-sm-3.col-md-2.text-center
       //-     if proj.project_lead.exists
       //-         span.proj__project_lead
       //-             img(src=proj._.project_lead.limit(120,120), alt=proj.name)
-      .col-md-10.col-md-offset-1
-        .proj_quote
-          if proj.quote
-            = proj.quote
-        .proj__description
-          if proj.description.html
-            != proj.description.html
+    .proj_info
+      if proj.quote
+        .proj__quote=proj.quote
+          if proj.project_image_1.exists
+            img(src=proj._.project_lead, alt=proj.name)
+      if proj.description.html
+        .proj__description!=proj.description.html

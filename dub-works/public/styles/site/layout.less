@@ -370,12 +370,13 @@ body {
 // Project models
 // -----------------------------
 .proj {
-	// width: 900px;
-  // max-width: 80%;
-  border: 2px solid @brand-primary;
+	  // max-width: 80%;
+	height: 600px;
+  	border: 2px solid @brand-primary;
 	border-top: none;
-  text-align: center;
-  margin: 60px auto;
+  	text-align: center;
+	  margin: 60px auto;
+	  
 
 	.top-border{
 	  position: absolute;
@@ -408,26 +409,46 @@ body {
 		margin-bottom: 20px;
 	}
 
-	.proj__description {
+	.proj_info {
 		position: relative;
-		visibility: hidden;
-		opacity: 0;
-		transition: all 0.5s ease;
-		display: block;
+		padding-left: 1em;
+		padding-right: 1em;
+		height: inherit;
+		overflow: hidden;
+
+		.proj__description {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding-left: 1em;
+			padding-right: 1em;
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.5s ease;
+			display: inline-block;
+		}
+
+		.proj__quote {
+			position: relative;
+			margin-top: 0;
+			margin-left: 0;
+			visibility: visible;
+			opacity: 1;
+			transition: all 0.5s ease;
+			display: block;
+
+			img {
+				position: relative;
+				width: 100%;
+				
+			}
+		}		
 	}
 
 	&:hover .proj__description {
 		visibility: visible;
 		opacity: 1;
 		transition: all 0.5s ease;
-	}
-
-	.proj__quote {
-		position: relative;
-		visibility: visible;
-		opacity: 1;
-		transition: all 0.5s ease;
-		display: inline-block;
 	}
 
 	&:hover .proj__quote {
